@@ -20,7 +20,7 @@ public class SquareBehavior : MonoBehaviour
                 timer = countdown;
                 Debug.Log("!!!");
                 
-                mergecounter = +1;
+                mergecounter += 1;
                 int mergecompare = collision.GetComponent<SquareBehavior>().mergecounter;
                 
                 if (mergecounter > mergecompare)
