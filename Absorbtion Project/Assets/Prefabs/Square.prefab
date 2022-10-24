@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 6119292049271859797}
   - component: {fileID: -250855451985436909}
   - component: {fileID: 8335172610537510812}
+  - component: {fileID: 8531180735735004966}
   m_Layer: 0
   m_Name: Square
-  m_TagString: Untagged
+  m_TagString: Squareblock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -150,3 +151,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 5
+--- !u!114 &8531180735735004966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2517673374577555983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7dec0f286b22ce4eb7a41009cc25a8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 5
+  countdown: 5

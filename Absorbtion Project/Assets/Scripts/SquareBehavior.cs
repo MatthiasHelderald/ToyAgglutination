@@ -5,18 +5,21 @@ using UnityEngine;
 
 public class SquareBehavior : MonoBehaviour
 {
-    void Start()
+    public float timer = 5;
+    public float countdown = 5;
+
+    private void OnTriggerStay2D(Collider2D collision)
     {
+        if (collision.gameObject.tag == "Squareblock")
+        {
+            timer -= Time.deltaTime;
         
+            if (timer < 0)
+            {
+                timer = countdown;
+                Debug.Log("!!!");
+            }
+        }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
 }
