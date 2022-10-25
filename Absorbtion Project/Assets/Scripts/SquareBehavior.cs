@@ -40,34 +40,37 @@ public class SquareBehavior : MonoBehaviour
 
                     Vector2 objectscale = transform.localScale;
                     transform.localScale = new Vector2(objectscale.x * 1.2f, objectscale.y * 1.2f);
+
+                    
+                    Vector2 objectScale = transform.localScale;
+                    transform.localScale = new Vector2(objectScale.x * 1.2f,objectScale.y*1.2f);
+
                 }
                 else
                 {
                     Destroy(transform.gameObject);
-                    Debug.Log("Self");
+                    //Debug.Log("Self");
                 }
 
             }
         }
     }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Mury"))
         {
             movement.y *= -1;
-            movement.x += Random.Range(0,5);
-            movement.y += Random.Range(0,5);
+            movement.x += Random.Range(-5,5);
+            movement.y += Random.Range(-5,5);
             body.AddForce(movement.normalized*5, ForceMode2D.Impulse);
         }
         
         if (collision.gameObject.CompareTag("Murx"))
         {
             movement.x *= -1;
-            movement.x += Random.Range(0,5);
-            movement.y += Random.Range(0,5);
+            movement.x += Random.Range(-5,5);
+            movement.y += Random.Range(-5,5);
             body.AddForce(movement.normalized*5, ForceMode2D.Impulse);
         }
     }
-    
 }

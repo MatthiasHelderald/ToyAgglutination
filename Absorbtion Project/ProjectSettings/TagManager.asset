@@ -6,8 +6,13 @@ TagManager:
   tags:
   - Squareblock
   - Mur
+
   - Murx
   - Mury
+
+  - Mury
+  - Murx
+
   layers:
   - Default
   - TransparentFX

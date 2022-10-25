@@ -225,6 +225,13 @@ PrefabInstance:
     - target: {fileID: 1943601117690536377, guid: f279c51f7563d5f4bb151eda59e2ab4b, type: 3}
       propertyPath: m_TagString
       value: Mury
+
+
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384717667682729685, guid: f279c51f7563d5f4bb151eda59e2ab4b, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+
       objectReference: {fileID: 0}
     - target: {fileID: 6031732869327772830, guid: f279c51f7563d5f4bb151eda59e2ab4b, type: 3}
       propertyPath: m_RootOrder
@@ -338,6 +345,12 @@ PrefabInstance:
     - target: {fileID: 1943601117690536377, guid: f279c51f7563d5f4bb151eda59e2ab4b, type: 3}
       propertyPath: m_TagString
       value: Murx
+
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384717667682729685, guid: f279c51f7563d5f4bb151eda59e2ab4b, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+
       objectReference: {fileID: 0}
     - target: {fileID: 6031732869327772830, guid: f279c51f7563d5f4bb151eda59e2ab4b, type: 3}
       propertyPath: m_RootOrder
@@ -403,6 +416,12 @@ PrefabInstance:
     - target: {fileID: 1943601117690536377, guid: f279c51f7563d5f4bb151eda59e2ab4b, type: 3}
       propertyPath: m_TagString
       value: Mury
+
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384717667682729685, guid: f279c51f7563d5f4bb151eda59e2ab4b, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+
       objectReference: {fileID: 0}
     - target: {fileID: 6031732869327772830, guid: f279c51f7563d5f4bb151eda59e2ab4b, type: 3}
       propertyPath: m_RootOrder
@@ -520,7 +539,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7327678741089688011, guid: 8a326efa33854064085ea884978d8d51, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 9.98
       objectReference: {fileID: 0}
     - target: {fileID: 7327678741089688011, guid: 8a326efa33854064085ea884978d8d51, type: 3}
       propertyPath: m_LocalPosition.y
@@ -581,6 +600,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4384717667682729685, guid: f279c51f7563d5f4bb151eda59e2ab4b, type: 3}
       propertyPath: m_SleepingMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384717667682729685, guid: f279c51f7563d5f4bb151eda59e2ab4b, type: 3}
+      propertyPath: m_CollisionDetection
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6031732869327772830, guid: f279c51f7563d5f4bb151eda59e2ab4b, type: 3}
