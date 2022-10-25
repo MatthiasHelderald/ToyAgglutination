@@ -37,6 +37,9 @@ public class SquareBehavior : MonoBehaviour
                 {
                     Destroy(collision.gameObject);
                     Debug.Log("Destroyed other");
+
+                    Vector2 objectscale = transform.localScale;
+                    transform.localScale = new Vector2(objectscale.x * 1.2f, objectscale.y * 1.2f);
                 }
                 else
                 {
@@ -66,5 +69,5 @@ public class SquareBehavior : MonoBehaviour
             body.AddForce(movement.normalized*5, ForceMode2D.Impulse);
         }
     }
-
+    
 }
