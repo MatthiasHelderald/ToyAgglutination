@@ -37,34 +37,56 @@ public class SquareBehavior : MonoBehaviour
                 {
                     Destroy(collision.gameObject);
                     Debug.Log("Destroyed other");
+                    
+                    Vector2 objectScale = transform.localScale;
+                    transform.localScale = new Vector2(objectScale.x * 1.2f,objectScale.y*1.2f);
                 }
                 else
                 {
                     Destroy(transform.gameObject);
-                    Debug.Log("Self");
+                    //Debug.Log("Self");
                 }
 
             }
         }
     }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Mury"))
         {
             movement.y *= -1;
-            movement.x += Random.Range(0,5);
-            movement.y += Random.Range(0,5);
+            movement.x += Random.Range(-5,5);
+            movement.y += Random.Range(-5,5);
             body.AddForce(movement.normalized*5, ForceMode2D.Impulse);
         }
         
         if (collision.gameObject.CompareTag("Murx"))
         {
             movement.x *= -1;
-            movement.x += Random.Range(0,5);
-            movement.y += Random.Range(0,5);
+            movement.x += Random.Range(-5,5);
+            movement.y += Random.Range(-5,5);
             body.AddForce(movement.normalized*5, ForceMode2D.Impulse);
         }
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown("x"))
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit2D hit;
+            
+            if (hit.collider != null)
+            {
+                Destroy(hit.transform.gameObject);
+                Debug.Log(ray);
+                
+            }
+            else
+            {
+                Debug.Log(ray);
+                //Debug.Log("noooo");
+            }
+        }
+    }
 }
