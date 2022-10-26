@@ -79,6 +79,7 @@ public class SquareBehavior : MonoBehaviour
     //pour générer de la gravité avec tout les objets
     void FixedUpdate()
     {
+        body.mass = mergecounter+1;
         SquareBehavior[] blocks = (SquareBehavior[])FindObjectsOfType (typeof (SquareBehavior));
         foreach (SquareBehavior block in blocks)
         {
