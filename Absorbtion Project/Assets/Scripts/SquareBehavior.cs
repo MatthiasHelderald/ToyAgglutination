@@ -12,11 +12,13 @@ public class SquareBehavior : MonoBehaviour
     private Vector2 movement;
     private Rigidbody2D body;
 
+    float mass;
+
     private void Start()
     {
         body = transform.gameObject.GetComponent<Rigidbody2D>();
-        movement = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
-        body.AddForce(movement.normalized*5, ForceMode2D.Impulse);
+        //movement = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
+        //body.AddForce(movement.normalized*5, ForceMode2D.Impulse);
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -72,5 +74,22 @@ public class SquareBehavior : MonoBehaviour
             movement.y += Random.Range(-5,5);
             body.AddForce(movement.normalized*5, ForceMode2D.Impulse);
         }
+    }
+
+    //pour générer de la gravité avec tout les objets
+    void FixedUpdate()
+    {
+        SquareBehavior[] blocks = (SquareBehavior[])FindObjectsOfType (typeof (SquareBehavior));
+        foreach (SquareBehavior block in blocks)
+        {
+            float distance = Vector2.Distance(block.transform.position, transform.position);
+            if (distance != 0)
+            {
+                mass = mergecounter+1;
+                block.GetComponent<Rigidbody2D>().AddForce(-1 * new Vector2(block.transform.position.x - transform.position.x, block.transform.position.y - transform.position.y).normalized * (mass * block.mass / Mathf.Pow(distance, 2f)));
+            }
+            
+        }
+        
     }
 }
