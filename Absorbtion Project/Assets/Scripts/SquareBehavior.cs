@@ -57,7 +57,7 @@ public class SquareBehavior : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Mury"))
+        if (collision.gameObject.CompareTag("Mur"))
         {
             movement.y *= -1;
             movement.x += Random.Range(-5,5);

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SelectorScript : MonoBehaviour
 {
+    public GameObject square;
     private void Update()
     {
         if (Input.GetKeyDown("x"))
@@ -21,8 +22,8 @@ public class SelectorScript : MonoBehaviour
                     for (int i = 1; i<mergenumber+1;i++)
                     {
                         Debug.Log("haha");
-                        Instantiate(hit.transform.gameObject, hit.transform.position, hit.transform.rotation);
-                        Destroy(hit.transform.gameObject);
+                        Instantiate(square);
+                        //Destroy(hit.transform.gameObject);
                     }
                     
                 }
