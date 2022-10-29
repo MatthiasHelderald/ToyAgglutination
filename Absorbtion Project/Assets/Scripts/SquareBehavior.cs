@@ -13,6 +13,7 @@ public class SquareBehavior : MonoBehaviour
     private Rigidbody2D body;
 
     float mass;
+    public float gravityMultiplier = 10;
 
     private void Start()
     {
@@ -23,43 +24,11 @@ public class SquareBehavior : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Squareblock"))
-        {
-            timer -= Time.deltaTime;
-
-            if (timer < 0)
-            {
-                timer = countdown;
-                Debug.Log("!!!");
-
-                mergecounter += 1;
-                int mergecompare = collision.GetComponent<SquareBehavior>().mergecounter;
-
-                if (mergecounter > mergecompare)
-                {
-                    Destroy(collision.gameObject);
-                    Debug.Log("Destroyed other");
-
-                    Vector2 objectscale = transform.localScale;
-                    transform.localScale = new Vector2(objectscale.x * 1.2f, objectscale.y * 1.2f);
-
-                    
-                    Vector2 objectScale = transform.localScale;
-                    transform.localScale = new Vector2(objectScale.x * 1.2f,objectScale.y*1.2f);
-
-                }
-                else
-                {
-                    Destroy(transform.gameObject);
-                    //Debug.Log("Self");
-                }
-
-            }
-        }
+        
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Mur"))
+        if (collision.gameObject.CompareTag("Mur") && false)
         {
             movement.y *= -1;
             movement.x += Random.Range(-5,5);
@@ -67,12 +36,39 @@ public class SquareBehavior : MonoBehaviour
             body.AddForce(movement.normalized*5, ForceMode2D.Impulse);
         }
         
-        if (collision.gameObject.CompareTag("Murx"))
+        if (collision.gameObject.CompareTag("Murx") && false)
         {
             movement.x *= -1;
             movement.x += Random.Range(-5,5);
             movement.y += Random.Range(-5,5);
             body.AddForce(movement.normalized*5, ForceMode2D.Impulse);
+        }
+
+        if (collision.gameObject.CompareTag("Squareblock"))
+        {
+            Debug.Log("!!!");
+
+            mergecounter += 1;
+            int mergecompare = collision.gameObject.GetComponent<SquareBehavior>().mergecounter;
+
+            if (mergecounter > mergecompare)
+            {
+                Destroy(collision.gameObject);
+                Debug.Log("Destroyed other");
+
+                Vector2 objectscale = transform.localScale;
+                transform.localScale = new Vector2(objectscale.x * 1.2f, objectscale.y * 1.2f);
+
+                
+                Vector2 objectScale = transform.localScale;
+                transform.localScale = new Vector2(objectScale.x * 1.2f,objectScale.y*1.2f);
+
+            }
+            else
+            {
+                Destroy(transform.gameObject);
+                //Debug.Log("Self");
+            }
         }
     }
 
@@ -87,7 +83,7 @@ public class SquareBehavior : MonoBehaviour
             if (distance != 0)
             {
                 mass = mergecounter+1;
-                block.GetComponent<Rigidbody2D>().AddForce(-1 * new Vector2(block.transform.position.x - transform.position.x, block.transform.position.y - transform.position.y).normalized * (mass * block.mass / Mathf.Pow(distance, 2f)));
+                block.GetComponent<Rigidbody2D>().AddForce(-1 * new Vector2(block.transform.position.x - transform.position.x, block.transform.position.y - transform.position.y).normalized * (mass * block.mass / Mathf.Pow(distance, 2f))*gravityMultiplier);
             }
             
         }

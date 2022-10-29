@@ -10,24 +10,26 @@ public class SelectorScript : MonoBehaviour
         if (Input.GetKeyDown("x"))
         
         { 
-            Vector2 ray = Input.mousePosition;
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, ray);
+            Vector3 ray = Input.mousePosition;
+            ray.z = 0;
+            RaycastHit2D hit = Physics2D.Raycast(ray, ray);
             
-            if (hit.transform.gameObject.CompareTag("Squareblock"))
+            if (hit.transform.gameObject.CompareTag("Squareblock") && hit.transform.gameObject != null)
             {
                 int mergenumber = hit.transform.gameObject.GetComponent<SquareBehavior>().mergecounter;
                 
                 if (mergenumber > 1)
                 {
-                    for (int i = 1; i<mergenumber+1;i++)
+                    for (int i = 1; i<mergenumber+2;i++)
                     {
                         Debug.Log("haha");
                         Instantiate(square);
-                        //Destroy(hit.transform.gameObject);
+                        Destroy(hit.transform.gameObject);
                     }
                     
                 }
             } 
+            else{Debug.Log("rien");}
         }
         
     }
