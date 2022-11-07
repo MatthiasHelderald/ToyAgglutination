@@ -46,7 +46,6 @@ public class SquareBehavior : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Squareblock"))
         {
-            Debug.Log("!!!");
 
             mergecounter += 1;
             int mergecompare = collision.gameObject.GetComponent<SquareBehavior>().mergecounter;
@@ -54,14 +53,13 @@ public class SquareBehavior : MonoBehaviour
             if (mergecounter > mergecompare)
             {
                 Destroy(collision.gameObject);
-                Debug.Log("Destroyed other");
 
                 Vector2 objectscale = transform.localScale;
-                transform.localScale = new Vector2(objectscale.x * 1.2f, objectscale.y * 1.2f);
+                transform.localScale = new Vector2(objectscale.x * 1.1f, objectscale.y * 1.1f);
 
                 
                 Vector2 objectScale = transform.localScale;
-                transform.localScale = new Vector2(objectScale.x * 1.2f,objectScale.y*1.2f);
+                transform.localScale = new Vector2(objectScale.x * 1.1f,objectScale.y*1.1f);
 
             }
             else
@@ -87,6 +85,15 @@ public class SquareBehavior : MonoBehaviour
             }
             
         }
+        
+    }
+
+    void OnMouseOver() 
+    {
+        Debug.Log("Detected");
+    }
+    void OnMouseExit() 
+    {
         
     }
 }

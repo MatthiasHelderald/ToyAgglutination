@@ -5,29 +5,21 @@ using UnityEngine;
 public class SelectorScript : MonoBehaviour
 {
     public GameObject square;
-    private void Update()
+    private void OnMouseOver()
     {
         if (Input.GetKeyDown("x"))
         
         { 
-            Vector3 ray = Input.mousePosition;
-            ray.z = 0;
-            RaycastHit2D hit = Physics2D.Raycast(ray, ray);
-            
-            if (hit.transform.gameObject.CompareTag("Squareblock") && hit.transform.gameObject != null)
+            int mergenumber = gameObject.GetComponent<SquareBehavior>().mergecounter;
+            if (mergenumber > 1)
             {
-                int mergenumber = hit.transform.gameObject.GetComponent<SquareBehavior>().mergecounter;
-                
-                if (mergenumber > 1)
+                for (int i = 1; i<mergenumber+2;i++)
                 {
-                    for (int i = 1; i<mergenumber+2;i++)
-                    {
-                        Debug.Log("haha");
-                        Instantiate(square);
-                        Destroy(hit.transform.gameObject);
-                    }
-                    
+                    Debug.Log("haha");
+                    Instantiate(square);
+                    Destroy(gameObject);
                 }
+
             } 
             else{Debug.Log("rien");}
         }
