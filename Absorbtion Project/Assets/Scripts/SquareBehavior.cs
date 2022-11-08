@@ -15,6 +15,9 @@ public class SquareBehavior : MonoBehaviour
     float mass;
     public float gravityMultiplier = 10;
 
+    public bool drag = false;
+    public float gradForce = 50;
+
     private void Start()
     {
         body = transform.gameObject.GetComponent<Rigidbody2D>();
@@ -70,6 +73,13 @@ public class SquareBehavior : MonoBehaviour
         }
     }
 
+    void Update()
+    {
+        if (Input.GetMouseButtonUp(1))
+        {
+            drag = false;
+        }
+    }
     //pour générer de la gravité avec tout les objets
     void FixedUpdate()
     {
@@ -85,15 +95,28 @@ public class SquareBehavior : MonoBehaviour
             }
             
         }
+
+        if (drag == true)
+        {
+            Vector2 mousePos = Input.mousePosition;
+            Vector2 worldPosition = Camera.main.ScreenToWorldPoint(mousePos);
+            transform.position = worldPosition;
+            body.velocity = new Vector2(0,0);
+            //body.AddForce(new Vector2((worldPosition.x - transform.position.x) * gradForce, (worldPosition.y - transform.position.y)*gradForce));
+        }
+
         
     }
 
     void OnMouseOver() 
     {
-        Debug.Log("Detected");
-    }
-    void OnMouseExit() 
-    {
-        
+        if (Input.GetMouseButton(1))
+        {
+            drag = true;
+        }
+        else
+        {
+            drag = false;
+        }
     }
 }
