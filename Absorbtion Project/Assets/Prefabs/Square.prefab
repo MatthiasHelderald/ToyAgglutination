@@ -169,6 +169,7 @@ MonoBehaviour:
   mergecounter: 0
   blackholenb: 10
   blackholestate: 0
+  selected: 0
   gravityMultiplier: 100
   drag: 0
   gradForce: 50
@@ -185,3 +186,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   square: {fileID: 2517673374577555983}
+  selecto: 0
