@@ -102,6 +102,7 @@ public class SquareBehavior : MonoBehaviour
             if (distance != 0)
             {
                 mass = mergecounter+1;
+                //block.GetComponent<Rigidbody2D>().AddForce(-1 * new Vector2(block.transform.position.x - transform.position.x, block.transform.position.y - transform.position.y).normalized * (mass * block.mass /distance)*gravityMultiplier);
                 block.GetComponent<Rigidbody2D>().AddForce(-1 * new Vector2(block.transform.position.x - transform.position.x, block.transform.position.y - transform.position.y).normalized * (mass * block.mass / Mathf.Pow(distance, 2f))*gravityMultiplier);
             }
             

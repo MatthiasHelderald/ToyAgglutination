@@ -167,8 +167,11 @@ MonoBehaviour:
   timer: 5
   countdown: 5
   mergecounter: 0
+  blackholenb: 10
+  blackholestate: 0
   gravityMultiplier: 100
   drag: 0
+  gradForce: 50
 --- !u!114 &4191699451800013536
 MonoBehaviour:
   m_ObjectHideFlags: 0
