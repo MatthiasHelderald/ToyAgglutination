@@ -16,7 +16,7 @@ public class SelectorScript : MonoBehaviour
                 for (int i = 1; i<mergenumber+2;i++)
                 {
                     Debug.Log("haha");
-                    Instantiate(square);
+                    Instantiate(square,gameObject.transform.position,gameObject.transform.rotation);
                     Destroy(gameObject);
                 }
 

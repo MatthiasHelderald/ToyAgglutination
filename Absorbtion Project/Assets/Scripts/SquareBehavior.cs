@@ -11,6 +11,8 @@ public class SquareBehavior : MonoBehaviour
     public int mergecounter = 0;
     private Vector2 movement;
     private Rigidbody2D body;
+    public int blackholenb = 10;
+    public bool blackholestate = false;
 
     float mass;
     public float gravityMultiplier = 10;
@@ -51,24 +53,33 @@ public class SquareBehavior : MonoBehaviour
         {
 
             mergecounter += 1;
+            if (mergecounter == blackholenb) 
+            {
+                blackholestate = true;
+                var cubeRenderer = transform.GetComponent<Renderer>();
+                cubeRenderer.material.SetColor("_Color", Color.black);
+                Vector2 objectscale = transform.localScale;
+                transform.localScale = new Vector2(objectscale.x * 0.75f, objectscale.y * 0.75f);
+                body.constraints = RigidbodyConstraints2D.FreezeAll;
+                //On change la taille la couleur de l'objet
+            }
             int mergecompare = collision.gameObject.GetComponent<SquareBehavior>().mergecounter;
 
-            if (mergecounter > mergecompare)
+            if (mergecounter > mergecompare & blackholestate == false)
             {
                 Destroy(collision.gameObject);
 
                 Vector2 objectscale = transform.localScale;
                 transform.localScale = new Vector2(objectscale.x * 1.1f, objectscale.y * 1.1f);
 
-                
-                Vector2 objectScale = transform.localScale;
-                transform.localScale = new Vector2(objectScale.x * 1.1f,objectScale.y*1.1f);
-
+            }
+            if ( mergecounter > mergecompare & blackholestate & true)
+            {
+                Destroy(collision.gameObject);
             }
             else
             {
-                Destroy(transform.gameObject);
-                //Debug.Log("Self");
+                //Destroy(transform.gameObject);
             }
         }
     }
