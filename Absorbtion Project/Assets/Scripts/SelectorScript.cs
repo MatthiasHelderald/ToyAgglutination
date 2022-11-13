@@ -6,7 +6,8 @@ using UnityEngine;
 public class SelectorScript : MonoBehaviour
 {
     public GameObject square;
-    public List<GameObject> selectar;
+    public bool selected = false;
+    public List<GameObject> haha;
     private void OnMouseOver()
     {
         if (Input.GetKeyDown("n"))
@@ -31,11 +32,15 @@ public class SelectorScript : MonoBehaviour
         {
             var cubeRenderer = gameObject.GetComponent<SquareBehavior>().GetComponent<Renderer>();
             cubeRenderer.material.SetColor("_Color", Color.green);
-            selectar.Add(cubeRenderer.gameObject);
-            if (selectar.Count == 2)
-            {
-                selectar[0].transform.Rotate(selectar[1].transform.position);
-            }
+            selected = true;
+        }
+        
+        if (selected == true)
+        {
+            var blocks = FindObjectOfType<SelectorScript>(selected==true);
+            haha.Add(blocks.gameObject);
+            selected = false;
+            Debug.Log(blocks.gameObject.transform.position);
         }
     }
 

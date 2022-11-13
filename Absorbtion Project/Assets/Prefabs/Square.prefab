@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -250855451985436909}
   - component: {fileID: 8335172610537510812}
   - component: {fileID: 8531180735735004966}
-  - component: {fileID: 4191699451800013536}
+  - component: {fileID: 4574457296459257773}
   m_Layer: 0
   m_Name: Square
   m_TagString: Squareblock
@@ -169,11 +169,10 @@ MonoBehaviour:
   mergecounter: 0
   blackholenb: 10
   blackholestate: 0
-  selected: 0
   gravityMultiplier: 100
   drag: 0
   gradForce: 50
---- !u!114 &4191699451800013536
+--- !u!114 &4574457296459257773
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -186,4 +185,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   square: {fileID: 2517673374577555983}
-  selecto: 0
+  selector_object: {fileID: 8927716021987397375, guid: 79dfa7f2406efb642919a7aece4b9734, type: 3}
