@@ -171,7 +171,7 @@ MonoBehaviour:
   blackholestate: 0
   gravityMultiplier: 100
   drag: 0
-  gradForce: 50
+  gradForce: 200
 --- !u!114 &4574457296459257773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,4 +185,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   square: {fileID: 2517673374577555983}
-  selector_object: {fileID: 8927716021987397375, guid: 79dfa7f2406efb642919a7aece4b9734, type: 3}
+  selected: 0

@@ -108,17 +108,17 @@ public class SquareBehavior : MonoBehaviour
             }
             
         }
-
+        
         if (drag == true)
         {
             Vector2 mousePos = Input.mousePosition;
             Vector2 worldPosition = Camera.main.ScreenToWorldPoint(mousePos);
-            transform.position = worldPosition;
-            body.velocity = new Vector2(0,0);
-            //body.AddForce(new Vector2((worldPosition.x - transform.position.x) * gradForce, (worldPosition.y - transform.position.y)*gradForce));
+            //transform.position = worldPosition;
+            //body.velocity = new Vector2(0,0);
+            body.position = worldPosition;
+            body.AddForce(new Vector2((worldPosition.x - transform.position.x) * gradForce, (worldPosition.y - transform.position.y)*gradForce));
+            
         }
-
-
     }
 
     void OnMouseOver() 
