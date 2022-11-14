@@ -18,10 +18,9 @@ public class ObjectSelectorScript : MonoBehaviour
             if (hit)
             {
                 Debug.Log(hit.transform.name);
-                return hit.transform.gameObject;
-            
+                var selected_objet = hit.transform.gameObject;
+                square_selection.Add(selected_objet);
             }
-            else return null;
         }
     }
 }
