@@ -7,7 +7,7 @@ public class SelectorScript : MonoBehaviour
 {
     public GameObject square;
     public bool selected = false;
-    public List<GameObject> haha;
+    //public List<GameObject> haha;
     private void OnMouseOver()
     {
         if (Input.GetKeyDown("n"))
@@ -38,7 +38,7 @@ public class SelectorScript : MonoBehaviour
         if (selected == true)
         {
             var blocks = FindObjectOfType<SelectorScript>(selected==true);
-            haha.Add(blocks.gameObject);
+            //haha.Add(blocks.gameObject);
             selected = false;
             Debug.Log(blocks.gameObject.transform.position);
         }

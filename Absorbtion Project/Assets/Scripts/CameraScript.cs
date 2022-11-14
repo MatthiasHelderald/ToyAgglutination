@@ -11,6 +11,7 @@ public class CameraScript : MonoBehaviour
     float zoomSpeed = 5.0f;
 
     private int zum = 1;
+    private int zumm = 1;
 
     private float originalSize = 0f;
 
@@ -32,17 +33,29 @@ public class CameraScript : MonoBehaviour
             thisCamera.orthographicSize = Mathf.Lerp(thisCamera.orthographicSize, 
                 targetSize, Time.deltaTime * zoomSpeed);
         }
-
-        if (Input.GetKeyDown("t"))
+        
+        if (Input.mouseScrollDelta.y < 0)
         {
             zum += 1;
+            
+            if (zum >= 1)
+            {
+                zumm += 1;
+                zum = 0;
+            }
         }
-        if (Input.GetKeyDown("g"))
+        if (Input.mouseScrollDelta.y > 0)
         {
             zum -= 1;
+            
+            if (zum <= -1)
+            {
+                zumm -= 1;
+                zum = 0;
+            }
         }
-        zoomFactor = Mathf.Clamp(zum,1,5);
-        
+        zoomFactor = Mathf.Clamp(zumm,1,Mathf.Infinity);
+        zoomFactor = zumm;
     }
 
     void SetZoom(float zoomFactor)
