@@ -55,11 +55,11 @@ public class SquareBehavior : MonoBehaviour
                 Destroy(collision.gameObject);
 
                 Vector2 objectscale = transform.localScale;
-                transform.localScale = new Vector2(objectscale.x * 1.1f, objectscale.y * 1.1f);
+                transform.localScale = new Vector2(objectscale.x * 0.9f, objectscale.y * 0.9f);
 
                 
                 Vector2 objectScale = transform.localScale;
-                transform.localScale = new Vector2(objectScale.x * 1.1f,objectScale.y*1.1f);
+                transform.localScale = new Vector2(objectScale.x * 0.9f,objectScale.y*0.9f);
 
             }
             else

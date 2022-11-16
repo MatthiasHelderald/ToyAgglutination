@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 2517673374577555983}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 6, y: 6, z: 6}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -168,8 +168,6 @@ MonoBehaviour:
   countdown: 5
   mergecounter: 0
   gravityMultiplier: 100
-  spawner: {fileID: 6811202585640291257, guid: fb0d80c5f1d3a304ba70345b51b03858, type: 3}
-  squareSpawner: {fileID: 0}
 --- !u!114 &4191699451800013536
 MonoBehaviour:
   m_ObjectHideFlags: 0
