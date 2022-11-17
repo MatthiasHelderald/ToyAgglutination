@@ -52,35 +52,33 @@ public class SquareBehavior : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Squareblock"))
         {
-
-            mergecounter += 1;
-            if (mergecounter == blackholenb) 
             {
-                blackholestate = true;
-                var cubeRenderer = transform.GetComponent<Renderer>();
-                cubeRenderer.material.SetColor("_Color", Color.black);
-                Vector2 objectscale = transform.localScale;
-                transform.localScale = new Vector2(objectscale.x * 0.75f, objectscale.y * 0.75f);
-                body.constraints = RigidbodyConstraints2D.FreezeAll;
-                //On change la taille la couleur de l'objet
-            }
-            int mergecompare = collision.gameObject.GetComponent<SquareBehavior>().mergecounter;
+                body.velocity += collision.gameObject.GetComponent<Rigidbody2D>().velocity;
+                mergecounter += 1;
+                if (mergecounter == blackholenb) 
+                {
+                    blackholestate = true;
+                    var cubeRenderer = transform.GetComponent<Renderer>();
+                    cubeRenderer.material.SetColor("_Color", Color.black);
 
-            if (mergecounter > mergecompare & blackholestate == false)
-            {
-                Destroy(collision.gameObject);
+                    transform.localScale = new Vector2(0.5f * 0.75f, 0.5f * 0.75f);
+                    body.constraints = RigidbodyConstraints2D.FreezeAll;
+                    //On change la taille la couleur de l'objet
+                }
+                int mergecompare = collision.gameObject.GetComponent<SquareBehavior>().mergecounter;
+                Debug.Log(mergecounter);
 
-                Vector2 objectscale = transform.localScale;
-                transform.localScale = new Vector2(objectscale.x * 1.1f, objectscale.y * 1.1f);
+                if (mergecounter > mergecompare & blackholestate == false)
+                {
+                    Destroy(collision.gameObject);
 
-            }
-            if ( mergecounter > mergecompare & blackholestate & true)
-            {
-                Destroy(collision.gameObject);
-            }
-            else
-            {
-                //Destroy(transform.gameObject);
+                    transform.localScale = new Vector2(0.5f * mergecounter, 0.5f * mergecounter);
+
+                }
+                if ( mergecounter > mergecompare & blackholestate & true)
+                {
+                    Destroy(collision.gameObject);
+                }
             }
         }
     }
