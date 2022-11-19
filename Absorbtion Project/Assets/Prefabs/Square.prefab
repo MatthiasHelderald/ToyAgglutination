@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -250855451985436909}
   - component: {fileID: 8335172610537510812}
   - component: {fileID: 8531180735735004966}
-  - component: {fileID: 4191699451800013536}
+  - component: {fileID: 4574457296459257773}
   m_Layer: 0
   m_Name: Square
   m_TagString: Squareblock
@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 2517673374577555983}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 6, y: 6, z: 6}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -167,8 +167,12 @@ MonoBehaviour:
   timer: 5
   countdown: 5
   mergecounter: 0
+  blackholenb: 10
+  blackholestate: 0
   gravityMultiplier: 100
---- !u!114 &4191699451800013536
+  drag: 0
+  gradForce: 200
+--- !u!114 &4574457296459257773
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -181,3 +185,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   square: {fileID: 2517673374577555983}
+  selected: 0
