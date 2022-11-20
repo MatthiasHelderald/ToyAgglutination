@@ -49,12 +49,13 @@ public class SquareBehavior : MonoBehaviour
             movement.y += Random.Range(-5,5);
             body.AddForce(movement.normalized*5, ForceMode2D.Impulse);
         }
-
-        if (collision.gameObject.CompareTag("Squareblock"))
+        
+        if (collision.gameObject.CompareTag("Squareblock")&& collision.transform.IsChildOf(transform)==false&& transform.IsChildOf(collision.transform)==false)//On vérifie que l'objet n'est pas le parent ou l'enfant du collider
         {
             {
                 body.velocity += collision.gameObject.GetComponent<Rigidbody2D>().velocity;
                 mergecounter += 1;
+
                 if (mergecounter == blackholenb) 
                 {
                     blackholestate = true;

@@ -7,46 +7,40 @@ public class ObjectSelectorScript : MonoBehaviour
 {
     public List<GameObject> square_selection;
     public bool bruh;
-    private GameObject square_one;
-    private GameObject square_two;
+    public GameObject square_one;
+    public GameObject square_two;
     private void Update()
     {
-        if (Input.GetMouseButtonDown(1))
+        
+        if (Input.GetKeyDown("j"))
         {
-            (GameObject, GameObject) Twins()
-            {
+            bruh = !bruh;
+        }
+        
+        if (Input.GetKeyDown("j"))
+        {
+            
                 Vector2 rayPos = new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y);
                 RaycastHit2D hit = Physics2D.Raycast(rayPos, Vector2.zero, 0f);
 
-                if (hit&bruh)
+                if (hit & bruh)
                 {
                     Debug.Log(hit.transform.name);
-                    //var selected_objet = hit.transform.gameObject;
-                    //square_selection.Add(selected_objet);
                     square_one = hit.transform.gameObject;
-                    bruh = false;
+                    var cubeRenderer = square_one.transform.GetComponent<Renderer>();
+                    cubeRenderer.material.SetColor("_Color", Color.red);
                 }
                 
-                if (hit&!bruh)
+                if (hit&bruh==false)
                 {
                     Debug.Log(hit.transform.name);
-                    //var selected_objet = hit.transform.gameObject;
-                    //square_selection.Add(selected_objet);
                     square_two = hit.transform.gameObject;
-                    bruh = true;
+                    square_one.transform.SetParent(square_two.transform);
+                    var cubeRenderer = square_two.transform.GetComponent<Renderer>();
+                    cubeRenderer.material.SetColor("_Color", Color.red);
+                    //Destroy(square_two);
                 }
-
-                return (square_one, square_two);
-            }
-
-            var jpp = Twins();
-            Debug.Log($",{jpp.Item1},selected1");
         }
 
-        
-        if (Input.GetMouseButtonDown(1))
-        {
-            
-        }
     }
 }
