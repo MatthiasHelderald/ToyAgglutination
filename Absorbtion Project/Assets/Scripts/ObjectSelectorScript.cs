@@ -43,8 +43,6 @@ public class ObjectSelectorScript : MonoBehaviour
                     //Destroy(square_two);
                 }
         }
-        
-        square_one.transform.RotateAround(square_two.transform.localPosition,Vector3.right,5 * Time.deltaTime);
 
     }
 }

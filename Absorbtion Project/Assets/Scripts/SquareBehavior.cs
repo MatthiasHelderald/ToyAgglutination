@@ -118,6 +118,15 @@ public class SquareBehavior : MonoBehaviour
             body.AddForce(new Vector2((worldPosition.x - transform.position.x) * gradForce, (worldPosition.y - transform.position.y)*gradForce));
             
         }
+
+        var childcount = transform.childCount;
+        var parentcheck = transform.parent;
+
+        if (childcount == 0 & parentcheck != (null))
+        {
+            transform.RotateAround(transform.parent.transform.localPosition,Vector3.forward,250 * Time.deltaTime);
+            transform.GetComponent<Rigidbody2D>().isKinematic = true;
+        }
     }
 
     void OnMouseOver() 
