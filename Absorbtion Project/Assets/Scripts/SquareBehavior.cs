@@ -12,7 +12,7 @@ public class SquareBehavior : MonoBehaviour
     public int mergecounter = 0;
     private Vector2 movement;
     private Rigidbody2D body;
-    public int blackholenb = 10;
+    public int blackholenb = 100;
     public bool blackholestate = false;
 
     float mass;
