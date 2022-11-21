@@ -34,6 +34,8 @@ public class ObjectSelectorScript : MonoBehaviour
                 if (hit&bruh==false)
                 {
                     Debug.Log(hit.transform.name);
+                    var rb_square = square_one.GetComponent<Rigidbody2D>();
+                    rb_square.constraints = RigidbodyConstraints2D.FreezePosition;
                     square_two = hit.transform.gameObject;
                     square_one.transform.SetParent(square_two.transform);
                     var cubeRenderer = square_two.transform.GetComponent<Renderer>();
@@ -41,6 +43,8 @@ public class ObjectSelectorScript : MonoBehaviour
                     //Destroy(square_two);
                 }
         }
+        
+        square_one.transform.RotateAround(square_two.transform.localPosition,Vector3.right,5 * Time.deltaTime);
 
     }
 }
