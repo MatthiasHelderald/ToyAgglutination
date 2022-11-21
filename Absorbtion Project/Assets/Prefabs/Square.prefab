@@ -169,9 +169,9 @@ MonoBehaviour:
   mergecounter: 0
   blackholenb: 10
   blackholestate: 0
-  gravityMultiplier: 100
+  gravityMultiplier: 500
   drag: 0
-  gradForce: 200
+  gradForce: 50
 --- !u!114 &4574457296459257773
 MonoBehaviour:
   m_ObjectHideFlags: 0

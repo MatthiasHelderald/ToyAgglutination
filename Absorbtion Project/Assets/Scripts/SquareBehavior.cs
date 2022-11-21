@@ -50,7 +50,7 @@ public class SquareBehavior : MonoBehaviour
             body.AddForce(movement.normalized*5, ForceMode2D.Impulse);
         }
 
-        if (collision.gameObject.CompareTag("Squareblock"))
+        if (collision.gameObject.CompareTag("Squareblock") && drag == false)
         {
             {
                 body.velocity += collision.gameObject.GetComponent<Rigidbody2D>().velocity;
@@ -113,7 +113,7 @@ public class SquareBehavior : MonoBehaviour
             Vector2 worldPosition = Camera.main.ScreenToWorldPoint(mousePos);
             //transform.position = worldPosition;
             //body.velocity = new Vector2(0,0);
-            body.position = worldPosition;
+            //body.position = worldPosition;
             body.AddForce(new Vector2((worldPosition.x - transform.position.x) * gradForce, (worldPosition.y - transform.position.y)*gradForce));
             
         }

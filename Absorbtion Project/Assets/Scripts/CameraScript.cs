@@ -13,6 +13,10 @@ public class CameraScript : MonoBehaviour
     private int zum = 1;
     private int zumm = 1;
 
+    private Rigidbody2D body;
+    bool drag = false;
+    public float dragForce = 50;
+
     private float originalSize = 0f;
 
     private Camera thisCamera;
@@ -21,6 +25,7 @@ public class CameraScript : MonoBehaviour
     void Start()
     {
         thisCamera = GetComponent<Camera>();
+        body = transform.gameObject.GetComponent<Rigidbody2D>();
         originalSize = thisCamera.orthographicSize;
     }
 
@@ -30,8 +35,7 @@ public class CameraScript : MonoBehaviour
         float targetSize = originalSize * zoomFactor;
         if (targetSize != thisCamera.orthographicSize)
         {
-            thisCamera.orthographicSize = Mathf.Lerp(thisCamera.orthographicSize, 
-                targetSize, Time.deltaTime * zoomSpeed);
+            thisCamera.orthographicSize = Mathf.Lerp(thisCamera.orthographicSize, targetSize, Time.deltaTime * zoomSpeed);
         }
         
         if (Input.mouseScrollDelta.y < 0)
@@ -56,6 +60,25 @@ public class CameraScript : MonoBehaviour
         }
         zoomFactor = Mathf.Clamp(zumm,1,Mathf.Infinity);
         zoomFactor = zumm;
+
+        if (Input.GetMouseButtonDown(2))
+        {
+            drag = true;
+        }
+        if (Input.GetMouseButtonUp(2))
+        {
+            drag = false;
+        }
+    }
+
+    void FixedUpdate() 
+    {
+        Vector2 mousePos = Input.mousePosition;
+        Vector2 worldPosition = Camera.main.ScreenToWorldPoint(mousePos);
+        if (drag == true)
+        {
+            body.AddForce(new Vector2((worldPosition.x - Camera.main.ScreenToWorldPoint(Input.mousePosition).x) * dragForce, (worldPosition.y - Camera.main.ScreenToWorldPoint(Input.mousePosition).y) * dragForce));
+        }
     }
 
     void SetZoom(float zoomFactor)
