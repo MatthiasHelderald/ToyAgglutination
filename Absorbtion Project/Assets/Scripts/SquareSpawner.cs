@@ -6,13 +6,24 @@ public class SquareSpawner : MonoBehaviour
 {
     public GameObject square;
     public bool mouseOnObject = false;
+
+    public float timer = 0.1f;
+    float currentTime;
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && mouseOnObject == false)
+        if (Input.GetMouseButton(0) && mouseOnObject == false)
         {
-            Vector3 ray = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            ray.z = 0;
-            Instantiate(square.gameObject,ray,transform.rotation);
+            if (timer < currentTime)
+            {
+                Vector3 ray = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                ray.z = 0;
+                Instantiate(square.gameObject,ray,transform.rotation);
+                currentTime = 0;
+            }
+            else
+            {
+                currentTime += Time.deltaTime;
+            }
         }
     }
 }

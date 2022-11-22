@@ -31,8 +31,8 @@ Transform:
   m_GameObject: {fileID: 2517673374577555983}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -166,10 +166,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 5
   countdown: 5
-  mergecounter: 0
+  mergecounter: 1
   blackholenb: 10
   blackholestate: 0
-  gravityMultiplier: 500
+  gravityMultiplier: 300
   drag: 0
   gradForce: 50
 --- !u!114 &4574457296459257773
