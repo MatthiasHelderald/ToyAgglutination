@@ -6,13 +6,8 @@ TagManager:
   tags:
   - Squareblock
   - Mur
-
   - Murx
-  - Mury
-
-  - Mury
-  - Murx
-
+  - Emoblock
   layers:
   - Default
   - TransparentFX
@@ -20,7 +15,7 @@ TagManager:
   - 
   - Water
   - UI
-  - Mur
+  - 
   - 
   - 
   - 

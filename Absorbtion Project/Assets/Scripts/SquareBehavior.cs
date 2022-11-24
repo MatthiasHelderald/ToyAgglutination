@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.Security;
 using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -14,6 +15,8 @@ public class SquareBehavior : MonoBehaviour
     private Rigidbody2D body;
     public int blackholenb = 10;
     public bool blackholestate = false;
+    public SquareSpawner squareSpawner;
+    public SquareSpawner.SquareType squaretype;
 
     float mass;
     public float gravityMultiplier = 10;
@@ -49,7 +52,6 @@ public class SquareBehavior : MonoBehaviour
             movement.y += Random.Range(-5,5);
             body.AddForce(movement.normalized*5, ForceMode2D.Impulse);
         }
-
         if (collision.gameObject.CompareTag("Squareblock"))
         {
             {
@@ -68,16 +70,40 @@ public class SquareBehavior : MonoBehaviour
                 int mergecompare = collision.gameObject.GetComponent<SquareBehavior>().mergecounter;
                 Debug.Log(mergecounter);
 
-                if (mergecounter > mergecompare & blackholestate == false)
+                if (squaretype == SquareSpawner.SquareType.AntiCube)
                 {
-                    Destroy(collision.gameObject);
+                    
+                        if (mergecounter > mergecompare & blackholestate == false)
+                        {
+                            {
+                                Destroy(collision.gameObject);
 
-                    transform.localScale = new Vector2(0.5f * mergecounter, 0.5f * mergecounter);
+                                transform.localScale = new Vector2(0.5f / mergecounter, 0.5f / mergecounter);
 
+                            }
+                            if (mergecounter > mergecompare & blackholestate & true)
+                            {
+                                Destroy(collision.gameObject);
+                            }
+                        }
+                    
                 }
-                if ( mergecounter > mergecompare & blackholestate & true)
+
+                if (squaretype == SquareSpawner.SquareType.Normal)
                 {
-                    Destroy(collision.gameObject);
+                    if (mergecounter > mergecompare & blackholestate == false)
+                    {
+                        {
+                            Destroy(collision.gameObject);
+
+                            transform.localScale = new Vector2(0.5f * mergecounter, 0.5f * mergecounter);
+
+                        }
+                        if (mergecounter > mergecompare & blackholestate & true)
+                        {
+                            Destroy(collision.gameObject);
+                        }
+                    }
                 }
             }
         }

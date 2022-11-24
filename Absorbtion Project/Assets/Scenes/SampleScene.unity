@@ -563,6 +563,10 @@ PrefabInstance:
       propertyPath: antisquare
       value: 
       objectReference: {fileID: 2517673374577555983, guid: 57e941a9c8e63ac43be6849424f04d7c, type: 3}
+    - target: {fileID: 6811202585640291256, guid: fb0d80c5f1d3a304ba70345b51b03858, type: 3}
+      propertyPath: mySquareType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6811202585640291257, guid: fb0d80c5f1d3a304ba70345b51b03858, type: 3}
       propertyPath: m_Name
       value: Spawner
