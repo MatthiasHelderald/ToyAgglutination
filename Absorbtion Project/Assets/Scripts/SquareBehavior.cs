@@ -77,10 +77,6 @@ public class SquareBehavior : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButton(1))
-        {
-            drag = true;
-        }
         if (Input.GetMouseButtonUp(1))
         {
             drag = false;
@@ -101,6 +97,7 @@ public class SquareBehavior : MonoBehaviour
                 cubeRenderer.material.SetColor("_Color", Color.black);
                 break;
         }
+
         if (mySquareType == SquareTypes.normal)
         {
             Debug.Log("ok");
