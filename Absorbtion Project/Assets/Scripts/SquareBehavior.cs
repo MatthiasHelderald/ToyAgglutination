@@ -12,8 +12,18 @@ public class SquareBehavior : MonoBehaviour
     public int mergecounter = 0;
     private Vector2 movement;
     private Rigidbody2D body;
+    private Renderer cubeRenderer;
     public int blackholenb = 10;
     public bool blackholestate = false;
+
+    public enum SquareTypes {
+        normal,
+        boidC,
+        boid,
+        blackhole
+    }
+
+    public SquareTypes mySquareType;
 
     float mass;
     public float gravityMultiplier = 10;
@@ -23,7 +33,8 @@ public class SquareBehavior : MonoBehaviour
 
     private void Start()
     {
-        body = transform.gameObject.GetComponent<Rigidbody2D>();
+        body = GetComponent<Rigidbody2D>();
+        cubeRenderer = GetComponent<Renderer>();
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -34,58 +45,89 @@ public class SquareBehavior : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Squareblock") && drag == false)
         {
+            body.velocity += collision.gameObject.GetComponent<Rigidbody2D>().velocity;
+            mergecounter += 1;
+            if (mergecounter == blackholenb)
             {
-                body.velocity += collision.gameObject.GetComponent<Rigidbody2D>().velocity;
-                mergecounter += 1;
-                if (mergecounter == blackholenb) 
-                {
-                    blackholestate = true;
-                    var cubeRenderer = transform.GetComponent<Renderer>();
-                    cubeRenderer.material.SetColor("_Color", Color.black);
+                blackholestate = true;
+                cubeRenderer.material.SetColor("_Color", Color.black);
 
-                    transform.localScale = new Vector2(0.5f * 0.75f, 0.5f * 0.75f);
-                    body.constraints = RigidbodyConstraints2D.FreezeAll;
-                    //On change la taille la couleur de l'objet
-                }
-                int mergecompare = collision.gameObject.GetComponent<SquareBehavior>().mergecounter;
-                Debug.Log(mergecounter);
-
-                if (mergecounter > mergecompare & blackholestate == false)
-                {
-                    Destroy(collision.gameObject);
-
-                    transform.localScale = new Vector2(0.5f * mergecounter, 0.5f * mergecounter);
-
-                }
-                if ( mergecounter > mergecompare & blackholestate & true)
-                {
-                    Destroy(collision.gameObject);
-                }
+                transform.localScale = new Vector2(50f * 0.75f, 50f * 0.75f);
+                body.constraints = RigidbodyConstraints2D.FreezeAll;
+                mySquareType = SquareTypes.blackhole;
+                //On change la taille la couleur de l'objet
             }
+            int mergecompare = collision.gameObject.GetComponent<SquareBehavior>().mergecounter;
+            Debug.Log(mergecounter);
+
+            if (mergecounter > mergecompare & blackholestate == false)
+            {
+                Destroy(collision.gameObject);
+
+                transform.localScale = new Vector2(0.5f * mergecounter, 0.5f * mergecounter);
+
+            }
+            if ( mergecounter > mergecompare & blackholestate & true)
+            {
+                Destroy(collision.gameObject);
+            }
+            body.velocity = new Vector2(0,0);
         }
     }
 
     void Update()
     {
+        if (Input.GetMouseButton(1))
+        {
+            drag = true;
+        }
         if (Input.GetMouseButtonUp(1))
         {
             drag = false;
+        }
+
+        switch(mySquareType)
+        {
+            case SquareTypes.normal:
+                cubeRenderer.material.SetColor("_Color", Color.white);
+                break;
+            case SquareTypes.boidC:
+                cubeRenderer.material.SetColor("_Color", Color.blue);
+                break;
+            case SquareTypes.boid:
+                cubeRenderer.material.SetColor("_Color", Color.cyan);
+                break;
+            case SquareTypes.blackhole:
+                cubeRenderer.material.SetColor("_Color", Color.black);
+                break;
+        }
+        if (mySquareType == SquareTypes.normal)
+        {
+            Debug.Log("ok");
         }
     }
     //pour générer de la gravité avec tout les objets
     void FixedUpdate()
     {
-        body.mass = mergecounter+1;
         SquareBehavior[] blocks = (SquareBehavior[])FindObjectsOfType (typeof (SquareBehavior));
-        foreach (SquareBehavior block in blocks)
+        switch(mySquareType)
         {
-            float distance = Vector2.Distance(block.transform.position, transform.position);
-            if (distance != 0 && distance <= 50)
-            {
-                mass = mergecounter+1;
-                block.GetComponent<Rigidbody2D>().AddForce(-1 * new Vector2(block.transform.position.x - transform.position.x, block.transform.position.y - transform.position.y).normalized * (mass * block.mass / Mathf.Pow(distance, 2f))*gravityMultiplier);
-            }
-            
+            case SquareTypes.normal:
+                body.mass = mergecounter+1;
+                foreach (SquareBehavior block in blocks)
+                {
+                    float distance = Vector2.Distance(block.transform.position, transform.position);
+                    if (distance != 0 && distance <= 50)
+                    {
+                        mass = mergecounter+1;
+                        body.AddForce(new Vector2(block.transform.position.x - transform.position.x, block.transform.position.y - transform.position.y).normalized * (mass * block.mass / Mathf.Pow(distance, 2f))*gravityMultiplier);
+                    }
+                    
+                }
+                break;
+            case SquareTypes.boid:
+                transform.Translate(transform.right*Time.deltaTime);
+                break;
         }
         
         if (drag == true)
