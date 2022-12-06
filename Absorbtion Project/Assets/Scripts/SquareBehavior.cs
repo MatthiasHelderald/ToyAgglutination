@@ -58,7 +58,6 @@ public class SquareBehavior : MonoBehaviour
                 //On change la taille la couleur de l'objet
             }
             int mergecompare = collision.gameObject.GetComponent<SquareBehavior>().mergecounter;
-            Debug.Log(mergecounter);
 
             if (mergecounter > mergecompare & blackholestate == false)
             {
@@ -82,6 +81,11 @@ public class SquareBehavior : MonoBehaviour
             drag = false;
         }
 
+        if (Input.GetKeyDown("x"))
+        {
+            Destroy(gameObject);
+        }
+
         switch(mySquareType)
         {
             case SquareTypes.normal:
@@ -96,11 +100,6 @@ public class SquareBehavior : MonoBehaviour
             case SquareTypes.blackhole:
                 cubeRenderer.material.SetColor("_Color", Color.black);
                 break;
-        }
-
-        if (mySquareType == SquareTypes.normal)
-        {
-            Debug.Log("ok");
         }
     }
     //pour générer de la gravité avec tout les objets
@@ -134,7 +133,24 @@ public class SquareBehavior : MonoBehaviour
             //transform.position = worldPosition;
             //body.velocity = new Vector2(0,0);
             //body.position = worldPosition;
-            body.AddForce(new Vector2((worldPosition.x - transform.position.x) * gradForce, (worldPosition.y - transform.position.y)*gradForce));
+            switch(mySquareType)
+            {
+                case SquareTypes.normal:
+                    body.AddForce(new Vector2((worldPosition.x - transform.position.x) * gradForce, (worldPosition.y - transform.position.y)*gradForce));
+                    break;
+
+                case SquareTypes.boid:
+                    if (Vector2.Distance(worldPosition,transform.position) >= 20)
+                    {
+                        body.AddForce(new Vector2((worldPosition.x - transform.position.x), (worldPosition.y - transform.position.y)));
+                    }
+                    break;
+                case SquareTypes.boidC:
+                    //body.velocity = new Vector2((worldPosition.x - transform.position.x), (worldPosition.y - transform.position.y)).normalized * gradForce;
+                    body.velocity = new Vector2((worldPosition.x - transform.position.x) * gradForce, (worldPosition.y - transform.position.y)*gradForce);
+                    break;
+            }
+            
             
         }
     }

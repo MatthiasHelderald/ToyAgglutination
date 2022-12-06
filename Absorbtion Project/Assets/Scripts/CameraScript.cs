@@ -21,6 +21,8 @@ public class CameraScript : MonoBehaviour
 
     private Camera thisCamera;
 
+    private Vector2 mousePos;
+
 // Use this for initialization
     void Start()
     {
@@ -64,6 +66,7 @@ public class CameraScript : MonoBehaviour
         if (Input.GetMouseButtonDown(2))
         {
             drag = true;
+            mousePos = Input.mousePosition;
         }
         if (Input.GetMouseButtonUp(2))
         {
@@ -73,12 +76,14 @@ public class CameraScript : MonoBehaviour
 
     void FixedUpdate() 
     {
-        Vector2 mousePos = Input.mousePosition;
         Vector2 worldPosition = Camera.main.ScreenToWorldPoint(mousePos);
         if (drag == true)
         {
-            body.AddForce(new Vector2((worldPosition.x - Camera.main.ScreenToWorldPoint(Input.mousePosition).x) * dragForce, (worldPosition.y - Camera.main.ScreenToWorldPoint(Input.mousePosition).y) * dragForce));
+            worldPosition = Camera.main.ScreenToWorldPoint(mousePos);
+            body.velocity = new Vector2((worldPosition.x - Camera.main.ScreenToWorldPoint(Input.mousePosition).x) * dragForce, (worldPosition.y - Camera.main.ScreenToWorldPoint(Input.mousePosition).y) * dragForce);
+            mousePos = Input.mousePosition;
         }
+        body.velocity = body.velocity/1.1f;
     }
 
     void SetZoom(float zoomFactor)
