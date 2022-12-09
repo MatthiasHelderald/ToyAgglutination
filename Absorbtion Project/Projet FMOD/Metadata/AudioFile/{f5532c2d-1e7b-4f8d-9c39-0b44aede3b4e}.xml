@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{f5532c2d-1e7b-4f8d-9c39-0b44aede3b4e}">
+		<property name="assetPath">
+			<value>spaceplop.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>6.6868253968253972</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b0f0d072-536c-4bdb-b20c-eba86a3ba88d}</destination>
+		</relationship>
+	</object>
+</objects>
