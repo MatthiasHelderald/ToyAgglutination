@@ -7,7 +7,6 @@ TagManager:
   - Squareblock
   - Mur
   - Murx
-  - Emoblock
   layers:
   - Default
   - TransparentFX

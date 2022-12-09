@@ -1,79 +1,67 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 using UnityEngine;
 
 public class SquareSpawner : MonoBehaviour
 {
     public GameObject square;
+    public List<GameObject> square_selection;
+    public int squareIndex = 0;
     public bool mouseOnObject = false;
 
-
-    public enum SquareType
-    {
-        Normal,
-        AntiCube,
-        Attractor,
-        Dead
-    }
-
-    public SquareType mySquareType;
-    
-
+    public float timer = 0.1f;
+    float currentTime;
     void Update()
     {
-        if (mySquareType == SquareType.Normal)
+        //if (Input.GetMouseButtonDown(0) && mouseOnObject == false)
         {
-            if (Input.GetKeyDown(KeyCode.A) && mouseOnObject == false)
-            {
-                mySquareType = SquareType.AntiCube;
-            }
+            //timer = currentTime;
         }
-        else
+        if (Input.GetMouseButtonDown(0) && mouseOnObject == false)
         {
-            if (Input.GetMouseButtonDown(0) && mouseOnObject == false)
-            {
-                mySquareType = SquareType.Normal;
-            }
-        }
-        
-        
-        switch (mySquareType)
-        {
-            case SquareType.Normal:
-            {
-                {
-                    if (Input.GetMouseButtonDown(0) && mouseOnObject == false)
-                    {
-                        Vector3 ray = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                        ray.z = 0;
-                        var squareObject = Instantiate(square.gameObject, ray, transform.rotation);
-                        var squareBehavior = squareObject.GetComponent<SquareBehavior>();
-                        squareBehavior.squareSpawner = this;
-                        squareBehavior.squaretype = SquareType.Normal;
-                    }
-                }
-            }
-                break;
+            Vector3 ray = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            ray.z = 0;
+            Instantiate(square.gameObject,ray,transform.rotation);
             
-            case SquareType.AntiCube:
+            if (timer < currentTime)
             {
-                if (Input.GetKeyDown(KeyCode.A) && mouseOnObject == false)
-                {
-                    Vector3 ray = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                    ray.z = 0;
-                    var anti_square = Instantiate(square.gameObject, ray, transform.rotation);
-                    anti_square.tag = "Emoblock";
-                    var cubeRenderer = anti_square.transform.GetComponent<Renderer>();
-                    cubeRenderer.material.SetColor("_Color", Color.blue);
-                    var squareBehavior = anti_square.GetComponent<SquareBehavior>();
-                    squareBehavior.squareSpawner = this;
-                    squareBehavior.squaretype = SquareType.AntiCube;
-                }
+                //Instantiate(square.gameObject,ray,transform.rotation);
+                currentTime = 0;
             }
-                break;
+            else
+            {
+                currentTime += Time.deltaTime;
+            }
         }
-
+        if (Input.GetKeyDown("+") || Input.GetKeyDown("p"))
+        {
+            if (squareIndex == 4)
+            {
+                squareIndex = 0;
+                square = square_selection[squareIndex];
+            }
+            else
+            {
+                squareIndex += 1;
+                square = square_selection[squareIndex];
+            }
+            Debug.ClearDeveloperConsole();
+            Debug.Log(square_selection[squareIndex].name);
+        }
+        if (Input.GetKeyDown("-") || Input.GetKeyDown("m"))
+        {
+            if (squareIndex == 0)
+            {
+                squareIndex = 4;
+                square = square_selection[squareIndex];
+            }
+            else
+            {
+                squareIndex -= 1;
+                square = square_selection[squareIndex];
+            }
+            Debug.ClearDeveloperConsole();
+            Debug.Log(square_selection[squareIndex].name);
+        }
     }
 }
