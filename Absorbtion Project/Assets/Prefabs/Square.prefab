@@ -167,9 +167,9 @@ MonoBehaviour:
   timer: 5
   countdown: 5
   mergecounter: 0
-  blackholenb: 500
+  blackholenb: 10
   blackholestate: 0
-  gravityMultiplier: 0
+  gravityMultiplier: 100
   drag: 0
   gradForce: 200
 --- !u!114 &4574457296459257773
