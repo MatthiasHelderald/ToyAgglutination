@@ -18,9 +18,6 @@ public class SquareBehavior : MonoBehaviour
 
     public enum SquareTypes {
         normal,
-        boidC,
-        boid,
-        blackhole
     }
 
     public SquareTypes mySquareType;
@@ -47,16 +44,7 @@ public class SquareBehavior : MonoBehaviour
         {
             body.velocity += collision.gameObject.GetComponent<Rigidbody2D>().velocity;
             mergecounter += 1;
-            if (mergecounter == blackholenb)
-            {
-                blackholestate = true;
-                cubeRenderer.material.SetColor("_Color", Color.black);
-
-                transform.localScale = new Vector2(50f * 0.75f, 50f * 0.75f);
-                body.constraints = RigidbodyConstraints2D.FreezeAll;
-                mySquareType = SquareTypes.blackhole;
-                //On change la taille la couleur de l'objet
-            }
+            
             int mergecompare = collision.gameObject.GetComponent<SquareBehavior>().mergecounter;
 
             if (mergecounter > mergecompare & blackholestate == false)
@@ -91,15 +79,6 @@ public class SquareBehavior : MonoBehaviour
             case SquareTypes.normal:
                 cubeRenderer.material.SetColor("_Color", Color.white);
                 break;
-            case SquareTypes.boidC:
-                cubeRenderer.material.SetColor("_Color", Color.blue);
-                break;
-            case SquareTypes.boid:
-                cubeRenderer.material.SetColor("_Color", Color.cyan);
-                break;
-            case SquareTypes.blackhole:
-                cubeRenderer.material.SetColor("_Color", Color.black);
-                break;
         }
     }
     //pour générer de la gravité avec tout les objets
@@ -121,9 +100,6 @@ public class SquareBehavior : MonoBehaviour
                     
                 }
                 break;
-            case SquareTypes.boid:
-                transform.Translate(transform.right*Time.deltaTime);
-                break;
         }
         
         if (drag == true)
@@ -138,17 +114,7 @@ public class SquareBehavior : MonoBehaviour
                 case SquareTypes.normal:
                     body.AddForce(new Vector2((worldPosition.x - transform.position.x) * gradForce, (worldPosition.y - transform.position.y)*gradForce));
                     break;
-
-                case SquareTypes.boid:
-                    if (Vector2.Distance(worldPosition,transform.position) >= 20)
-                    {
-                        body.AddForce(new Vector2((worldPosition.x - transform.position.x), (worldPosition.y - transform.position.y)));
-                    }
-                    break;
-                case SquareTypes.boidC:
-                    //body.velocity = new Vector2((worldPosition.x - transform.position.x), (worldPosition.y - transform.position.y)).normalized * gradForce;
-                    body.velocity = new Vector2((worldPosition.x - transform.position.x) * gradForce, (worldPosition.y - transform.position.y)*gradForce);
-                    break;
+                
             }
             
             
