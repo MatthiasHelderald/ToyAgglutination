@@ -27,14 +27,19 @@ public class SelectorScript : MonoBehaviour
             else{Debug.Log("rien");}
         }
         
-
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1)) 
         {
             var cubeRenderer = gameObject.GetComponent<SquareBehavior>().GetComponent<Renderer>();
             cubeRenderer.material.SetColor("_Color", Color.green);
             selected = true;
         }
-        
+        for (int i = 0; i < Input.touchCount; ++i)
+        if (Input.GetTouch(i).phase == TouchPhase.Began) 
+        {
+            var cubeRenderer = gameObject.GetComponent<SquareBehavior>().GetComponent<Renderer>();
+            cubeRenderer.material.SetColor("_Color", Color.green);
+            selected = true;
+        }
         if (selected == true)
         {
             var blocks = FindObjectOfType<SelectorScript>(selected==true);

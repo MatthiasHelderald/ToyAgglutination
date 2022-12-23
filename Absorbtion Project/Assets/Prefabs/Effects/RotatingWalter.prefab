@@ -35,7 +35,7 @@ Transform:
   m_GameObject: {fileID: 2517673374577555983}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -174,9 +174,10 @@ MonoBehaviour:
   blackholenb: 100
   blackholestate: 0
   mySquareType: 0
-  gravityMultiplier: 200
+  gravityMultiplier: 50
   drag: 0
   gradForce: 50
+  findAllSquare: {fileID: 0}
 --- !u!114 &4574457296459257773
 MonoBehaviour:
   m_ObjectHideFlags: 0
