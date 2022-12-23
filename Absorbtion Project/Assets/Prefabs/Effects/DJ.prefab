@@ -176,6 +176,7 @@ MonoBehaviour:
   gravityMultiplier: 500
   drag: 0
   gradForce: 50
+  blocks: []
 --- !u!114 &4574457296459257773
 MonoBehaviour:
   m_ObjectHideFlags: 0

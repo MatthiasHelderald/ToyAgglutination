@@ -35,7 +35,7 @@ public class SquareSpawner : MonoBehaviour
         }
         if (Input.GetKeyDown("+") || Input.GetKeyDown("p"))
         {
-            if (squareIndex == 4)
+            if (squareIndex == square_selection.Count-1)
             {
                 squareIndex = 0;
                 square = square_selection[squareIndex];
@@ -52,7 +52,7 @@ public class SquareSpawner : MonoBehaviour
         {
             if (squareIndex == 0)
             {
-                squareIndex = 4;
+                squareIndex = square_selection.Count-1;
                 square = square_selection[squareIndex];
             }
             else

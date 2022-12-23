@@ -5,19 +5,25 @@ using UnityEngine.VFX;
 
 public class EventMergeOnScript : MonoBehaviour
 {
+    [Header("Components")]
     public VisualEffect visualEffect;
     public Rigidbody2D body;
+
+    [Header("Etat")]
+    [Tooltip("Vitesse du cube avant l'event 'SpeedOn'/'SpeedOff'")]
+    public float speed;
+
     // Start is called before the first frame update
     void Start()
     {
-        visualEffect = GetComponent<VisualEffect>(); 
+        //visualEffect = GetComponent<VisualEffect>(); 
         body = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (body.velocity.magnitude >= 20)
+        if (body.velocity.magnitude >= speed)
         {
             visualEffect.SendEvent("SpeedOn");
         }

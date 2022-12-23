@@ -48,7 +48,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2517673374577555983}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -173,10 +173,11 @@ MonoBehaviour:
   mergecounter: 1
   blackholenb: 100
   blackholestate: 0
-  mySquareType: 0
+  mySquareType: 1
   gravityMultiplier: 200
   drag: 0
   gradForce: 50
+  blocks: []
 --- !u!114 &4574457296459257773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,5 +293,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11998eac87abb364185d7e79e53dcf7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  visualEffect: {fileID: 0}
+  visualEffect: {fileID: 2598290738651281125}
   body: {fileID: 0}
+  speed: 0

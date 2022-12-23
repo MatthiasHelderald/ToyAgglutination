@@ -2589,8 +2589,7 @@ MonoBehaviour:
   title: 
   m_Owners:
   - {fileID: 114149085094691040}
-  m_Shader: {fileID: -6465566751694194690, guid: 2070963eff9b55d479ad64dd64bf38a7,
-    type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 2070963eff9b55d479ad64dd64bf38a7, type: 3}
   m_ShaderName: Shader Graphs/PortalDistortion
 --- !u!114 &114256488731646898
 MonoBehaviour:
@@ -8931,7 +8930,7 @@ MonoBehaviour:
     enumValues: []
     descendantCount: 0
   m_ImportDependencies: []
-  m_GraphVersion: 8
+  m_GraphVersion: 9
   m_ResourceVersion: 1
   m_SubgraphDependencies: []
   m_CategoryPath: 
@@ -10292,7 +10291,7 @@ MonoBehaviour:
   stripCapacity: 16
   particlePerStripCount: 16
   needsComputeBounds: 0
-  boundsSettingMode: 1
+  boundsMode: 1
   m_Space: 1
 --- !u!114 &114903466379297472
 MonoBehaviour:
@@ -11773,18 +11772,22 @@ MonoBehaviour:
   m_Nodes:
   - m_Id: 0
     linkedSlots:
-    - outputSlot: {fileID: 8926484042661614666}
-      inputSlot: {fileID: 0}
     - outputSlot: {fileID: 8926484042661614667}
       inputSlot: {fileID: 8926484042661615180}
     - outputSlot: {fileID: 8926484042661614667}
       inputSlot: {fileID: 8926484042661614686}
     - outputSlot: {fileID: 8926484042661614666}
       inputSlot: {fileID: 8926484042661615475}
+    - outputSlot: {fileID: 8926484042661614667}
+      inputSlot: {fileID: 8926484042661615556}
+    - outputSlot: {fileID: 8926484042661614671}
+      inputSlot: {fileID: 8926484042661615568}
+    - outputSlot: {fileID: 8926484042661614672}
+      inputSlot: {fileID: 8926484042661615569}
+    - outputSlot: {fileID: 8926484042661614673}
+      inputSlot: {fileID: 8926484042661615570}
     position: {x: -3050.073, y: 364.32278}
-    expandedSlots:
-    - {fileID: 8926484042661614667}
-    - {fileID: 8926484042661614666}
+    expandedSlots: []
     expanded: 1
 --- !u!114 &8926484042661614666
 MonoBehaviour:
@@ -12091,7 +12094,7 @@ MonoBehaviour:
   stripCapacity: 16
   particlePerStripCount: 16
   needsComputeBounds: 0
-  boundsSettingMode: 1
+  boundsMode: 1
   m_Space: 0
 --- !u!114 &8926484042661614685
 MonoBehaviour:

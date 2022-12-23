@@ -15,11 +15,12 @@ GameObject:
   - component: {fileID: 8335172610537510812}
   - component: {fileID: 8531180735735004966}
   - component: {fileID: 4574457296459257773}
-  - component: {fileID: 8137647555977548081}
-  - component: {fileID: -5309363305090273450}
-  - component: {fileID: -1375638952130261409}
+  - component: {fileID: 6084124460138950170}
+  - component: {fileID: 2598290738651281125}
+  - component: {fileID: -4877240177479861664}
+  - component: {fileID: -1164086889888143257}
   m_Layer: 0
-  m_Name: BouleDeFeu
+  m_Name: Essay
   m_TagString: Squareblock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -191,7 +192,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   square: {fileID: 2517673374577555983}
   selected: 0
---- !u!2083052967 &8137647555977548081
+--- !u!122 &6084124460138950170
+Halo:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2517673374577555983}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_Size: 5
+--- !u!2083052967 &2598290738651281125
 VisualEffect:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -199,7 +212,7 @@ VisualEffect:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2517673374577555983}
   m_Enabled: 1
-  m_Asset: {fileID: 8926484042661614526, guid: b92048100b3776d48a0bcf4b3c0089e1, type: 3}
+  m_Asset: {fileID: 8926484042661614526, guid: dcb408cb6bde6964cbe9dc175c0017d6, type: 3}
   m_InitialEventName: OnPlay
   m_InitialEventNameOverriden: 0
   m_StartSeed: 0
@@ -207,20 +220,11 @@ VisualEffect:
   m_ResourceVersion: 1
   m_PropertySheet:
     m_Float:
-      m_Array:
-      - m_Value: 1
-        m_Name: AttractForce
-        m_Overridden: 1
+      m_Array: []
     m_Vector2f:
       m_Array: []
     m_Vector3f:
-      m_Array:
-      - m_Value: {x: 4.977, y: 1.961, z: -1.905}
-        m_Name: AttractWorldPosition_position
-        m_Overridden: 1
-      - m_Value: {x: 0, y: -5, z: 0}
-        m_Name: Gravity
-        m_Overridden: 1
+      m_Array: []
     m_Vector4f:
       m_Array: []
     m_Uint:
@@ -237,7 +241,7 @@ VisualEffect:
       m_Array: []
     m_Bool:
       m_Array: []
---- !u!73398921 &-5309363305090273450
+--- !u!73398921 &-4877240177479861664
 VFXRenderer:
   serializedVersion: 1
   m_ObjectHideFlags: 0
@@ -255,7 +259,7 @@ VFXRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -277,7 +281,7 @@ VFXRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &-1375638952130261409
+--- !u!114 &-1164086889888143257
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -289,6 +293,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11998eac87abb364185d7e79e53dcf7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  visualEffect: {fileID: 8137647555977548081}
+  visualEffect: {fileID: 2598290738651281125}
   body: {fileID: 0}
-  speed: 10
+  speed: 0
