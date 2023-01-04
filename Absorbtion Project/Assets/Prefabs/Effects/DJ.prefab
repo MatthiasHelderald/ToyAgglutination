@@ -172,11 +172,11 @@ MonoBehaviour:
   mergecounter: 1
   blackholenb: 100
   blackholestate: 0
-  mySquareType: 0
+  mySquareType: 1
   gravityMultiplier: 500
   drag: 0
   gradForce: 50
-  blocks: []
+  findAllSquare: {fileID: 0}
 --- !u!114 &4574457296459257773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,7 +286,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 2
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -4231,7 +4231,7 @@ ParticleSystem:
     widthOverTrail:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2
+      scalar: 0.5
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -4931,8 +4931,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: f25e690f0553c7c4ab0210c493fba62e, type: 2}
+  - {fileID: 2100000, guid: f25e690f0553c7c4ab0210c493fba62e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

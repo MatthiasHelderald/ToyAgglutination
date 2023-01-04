@@ -13,6 +13,7 @@ public class SquareSpawner : MonoBehaviour
     float currentTime;
     void Update()
     {
+        square = square_selection[squareIndex];
         //if (Input.GetMouseButtonDown(0) && mouseOnObject == false)
         {
             //timer = currentTime;

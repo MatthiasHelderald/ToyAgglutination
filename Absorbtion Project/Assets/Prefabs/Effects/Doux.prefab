@@ -172,10 +172,11 @@ MonoBehaviour:
   mergecounter: 1
   blackholenb: 100
   blackholestate: 0
-  mySquareType: 0
+  mySquareType: 1
   gravityMultiplier: 200
   drag: 0
   gradForce: 5
+  findAllSquare: {fileID: 0}
 --- !u!114 &4574457296459257773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -290,3 +291,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   visualEffect: {fileID: 8137647555977548081}
   body: {fileID: 0}
+  speed: 0

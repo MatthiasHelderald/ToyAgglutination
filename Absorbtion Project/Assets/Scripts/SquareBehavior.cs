@@ -16,6 +16,7 @@ public class SquareBehavior : MonoBehaviour
 
     [Header("Nombre de merge")]
     public int mergecounter = 0;
+    public int mergeLimit = 10;
     private Vector2 movement;
 
     [Header("BlackHole")]
@@ -41,12 +42,14 @@ public class SquareBehavior : MonoBehaviour
     public float gradForce = 50;
 
     public FindAllSquare findAllSquare;
+    public SquareSpawner squareSpawner;
 
     private void Start()
     {
         body = GetComponent<Rigidbody2D>();
         cubeRenderer = GetComponent<Renderer>();
-        findAllSquare = GameObject.Find("FindAllGO").GetComponent<FindAllSquare>();
+        findAllSquare = GameObject.Find("GameManager").GetComponent<FindAllSquare>();
+        squareSpawner = GameObject.Find("GameManager").GetComponent<SquareSpawner>();
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -96,6 +99,17 @@ public class SquareBehavior : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        if (mergecounter >= mergeLimit)
+        {
+            for(int i = 0; i < mergeLimit; i++) 
+            {
+                GameObject newBloc = Instantiate(squareSpawner.square_selection[squareSpawner.squareIndex], gameObject.transform.position, gameObject.transform.rotation);
+                newBloc.transform.position = new Vector3(transform.position.x + Mathf.Cos(360*i/10)*2, transform.position.y + Mathf.Sin(360*i/10)*2);
+                newBloc.GetComponent<Rigidbody2D>().velocity = new Vector2(Mathf.Cos(360*i/10)*50, Mathf.Sin(360*i/10)*50);
+            }
+            Destroy(gameObject);
+        }
         
     }
     //pour générer de la gravité avec tout les objets
@@ -106,10 +120,13 @@ public class SquareBehavior : MonoBehaviour
         
         foreach (SquareBehavior block in findAllSquare.blocks)
         {
-            float distance = Vector2.Distance(block.transform.position, transform.position);
-            if (distance != 0 && distance <= 50)
+            if (block != null)
             {
-                body.AddForce(new Vector2(block.transform.position.x - transform.position.x, block.transform.position.y - transform.position.y).normalized * (mass * block.mass / Mathf.Pow(distance, 2f))*gravityMultiplier);
+                float distance = Vector2.Distance(block.transform.position, transform.position);
+                if (distance != 0 && distance <= 50)
+                {
+                    body.AddForce(new Vector2(block.transform.position.x - transform.position.x, block.transform.position.y - transform.position.y).normalized * (mass * block.mass / Mathf.Pow(distance, 2f))*gravityMultiplier);
+                }
             }
         }
         
