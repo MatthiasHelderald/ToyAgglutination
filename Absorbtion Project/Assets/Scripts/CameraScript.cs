@@ -15,9 +15,13 @@ public class CameraScript : MonoBehaviour
 
     private Rigidbody2D body;
     bool drag = false;
+    [Header("Mouvement camera")]
+    [Tooltip("Vitesse de suivie de la souris, Bas = fluide mais suis mal la souris / Haut = suis très bien la souris")]
     public float dragForce = 50;
+    [Tooltip("Ralentissement en %, Bas = lent / Haut = Rapide")]
+    public float ralentissement = 10f;
 
-    private float originalSize = 0f;
+    private float originalSize;
 
     private Camera thisCamera;
 
@@ -42,25 +46,12 @@ public class CameraScript : MonoBehaviour
         
         if (Input.mouseScrollDelta.y < 0)
         {
-            zum += 1;
-            
-            if (zum >= 1)
-            {
-                zumm += 1;
-                zum = 0;
-            }
+            zumm += 1;
         }
         if (Input.mouseScrollDelta.y > 0)
         {
-            zum -= 1;
-            
-            if (zum <= -1)
-            {
-                zumm -= 1;
-                zum = 0;
-            }
+            zumm -= 1;
         }
-        zoomFactor = Mathf.Clamp(zumm,1,Mathf.Infinity);
         zoomFactor = zumm;
 
         if (Input.GetMouseButtonDown(2))
@@ -83,7 +74,7 @@ public class CameraScript : MonoBehaviour
             body.velocity = new Vector2((worldPosition.x - Camera.main.ScreenToWorldPoint(Input.mousePosition).x) * dragForce, (worldPosition.y - Camera.main.ScreenToWorldPoint(Input.mousePosition).y) * dragForce);
             mousePos = Input.mousePosition;
         }
-        body.velocity = body.velocity/1.1f;
+        body.velocity = body.velocity*ralentissement/100;
     }
 
     void SetZoom(float zoomFactor)

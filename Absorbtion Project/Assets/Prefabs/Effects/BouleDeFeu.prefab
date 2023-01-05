@@ -172,10 +172,11 @@ MonoBehaviour:
   mergecounter: 1
   blackholenb: 100
   blackholestate: 0
-  mySquareType: 0
-  gravityMultiplier: 200
+  mySquareType: 1
+  gravityMultiplier: 500
   drag: 0
   gradForce: 50
+  findAllSquare: {fileID: 0}
 --- !u!114 &4574457296459257773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -288,5 +289,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11998eac87abb364185d7e79e53dcf7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  visualEffect: {fileID: 0}
+  visualEffect: {fileID: 8137647555977548081}
   body: {fileID: 0}
+  speed: 10

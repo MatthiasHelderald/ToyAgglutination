@@ -172,10 +172,11 @@ MonoBehaviour:
   mergecounter: 1
   blackholenb: 100
   blackholestate: 0
-  mySquareType: 0
+  mySquareType: 1
   gravityMultiplier: 500
   drag: 0
   gradForce: 50
+  findAllSquare: {fileID: 0}
 --- !u!114 &4574457296459257773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4988,7 +4989,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 6d8b81876db394c41b06fd75254670ae, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

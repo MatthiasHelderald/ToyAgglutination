@@ -109,7 +109,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 6200000, guid: c9918c9efe3c4754a906529c34b3938c, type: 2}
+  m_Material: {fileID: 6200000, guid: f24ddb9065311e84c9d2b49fa25715bd, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 0
   m_CollisionDetection: 0
@@ -173,10 +173,11 @@ MonoBehaviour:
   mergecounter: 1
   blackholenb: 100
   blackholestate: 0
-  mySquareType: 0
+  mySquareType: 1
   gravityMultiplier: 200
   drag: 0
   gradForce: 50
+  findAllSquare: {fileID: 0}
 --- !u!114 &4574457296459257773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,5 +293,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11998eac87abb364185d7e79e53dcf7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  visualEffect: {fileID: 0}
+  visualEffect: {fileID: 2598290738651281125}
   body: {fileID: 0}
+  speed: 0
