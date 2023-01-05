@@ -368,7 +368,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clearColorMode: 1
-  backgroundColorHDR: {r: 0.007843138, g: 0.015686275, b: 0.047058824, a: 0}
+  backgroundColorHDR: {r: 0, g: 0, b: 0.03137255, a: 0}
   clearDepth: 1
   volumeLayerMask:
     serializedVersion: 2
@@ -513,10 +513,10 @@ RectTransform:
   m_Father: {fileID: 1168077262}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.0000076293945}
-  m_SizeDelta: {x: 1035, y: 582}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -435, y: -246}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1091591525
 MonoBehaviour:
@@ -531,7 +531,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.015686275, g: 0.043137256, b: 0.121568635, a: 1}
+  m_Color: {r: 0, g: 0, b: 0.078431375, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1558,7 +1558,7 @@ MonoBehaviour:
   findAllSquare: {fileID: 1912556419}
   image: {fileID: 1091591525}
   c: {r: 0, g: 0, b: 0, a: 0}
-  transitionTimer: 60
+  transitionTimer: 5
 --- !u!114 &1912556422
 MonoBehaviour:
   m_ObjectHideFlags: 0
