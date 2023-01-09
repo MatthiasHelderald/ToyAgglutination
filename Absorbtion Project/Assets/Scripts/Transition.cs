@@ -53,8 +53,8 @@ public class Transition : MonoBehaviour
         if (timer >= transitionTimer-1)
         {
             c = image.color;
-            c.a = ((timer-9)/(transitionTimer-9));
-            c.a = (timer-9)/(transitionTimer-9);
+            c.a = ((timer-(transitionTimer-1))/(transitionTimer-(transitionTimer-1)));
+            c.a = (timer-(transitionTimer-1))/(transitionTimer-(transitionTimer-1));
             image.color = c;
         }
     }

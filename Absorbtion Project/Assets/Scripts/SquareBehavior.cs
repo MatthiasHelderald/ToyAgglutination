@@ -32,6 +32,8 @@ public class SquareBehavior : MonoBehaviour
     }
     [Header("Etat du grab")]
     public SquareTypes mySquareType;
+    private bool rot;
+    private int completeRotation;
 
     float mass;
     [Tooltip("Froce de la gravité")]
@@ -58,7 +60,7 @@ public class SquareBehavior : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Squareblock") && drag == false)
+        if (collision.gameObject.CompareTag("Squareblock"))// && drag == false)
         {
             mergecounter += 1;
             if (mergecounter == blackholenb)
@@ -106,10 +108,15 @@ public class SquareBehavior : MonoBehaviour
             {
                 GameObject newBloc = Instantiate(squareSpawner.square_selection[squareSpawner.squareIndex], gameObject.transform.position, gameObject.transform.rotation);
                 newBloc.transform.position = new Vector3(transform.position.x + Mathf.Cos(360*i/10)*2, transform.position.y + Mathf.Sin(360*i/10)*2);
-                newBloc.GetComponent<Rigidbody2D>().velocity = new Vector2(Mathf.Cos(360*i/10)*50, Mathf.Sin(360*i/10)*50);
+                newBloc.GetComponent<Rigidbody2D>().velocity = new Vector2(Mathf.Cos(360*i/10)*50, Mathf.Sin(360*i/10)*100);
             }
             Destroy(gameObject);
         }
+        if (body.velocity.magnitude >100)
+        {
+            body.velocity = body.velocity.normalized * 100;
+        }
+        body.velocity = body.velocity * 0.999f;
         
     }
     //pour générer de la gravité avec tout les objets
@@ -152,6 +159,32 @@ public class SquareBehavior : MonoBehaviour
                     body.velocity = new Vector2((worldPosition.x - transform.position.x) * gradForce, (worldPosition.y - transform.position.y)*gradForce);
                     break;
             }
+
+            if (worldPosition.x > 0 && transform.position.x < 0 || worldPosition.x < 0 && transform.position.x > 0)
+            {
+                if (rot == true)
+                {
+                    completeRotation = 0;
+                }
+                completeRotation += 1;
+                rot = true;
+                Debug.Log(completeRotation);
+            }
+            if (worldPosition.y > 0 && transform.position.y < 0 || worldPosition.y < 0 && transform.position.y > 0)
+            {
+                if (rot == false)
+                {
+                    completeRotation = 0;
+                }
+                completeRotation += 1;
+                rot = false;
+                Debug.Log(completeRotation);
+            }
+
+            if (completeRotation >= 3)
+            {
+                mySquareType = SquareTypes.orbite;
+            }
         }
     }
 
@@ -165,6 +198,8 @@ public class SquareBehavior : MonoBehaviour
         else
         {
             drag = false;
+            mySquareType = SquareTypes.normal;
+            completeRotation = 0;
         }
     }
 }
