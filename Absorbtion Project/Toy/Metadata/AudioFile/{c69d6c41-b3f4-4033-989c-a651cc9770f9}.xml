@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{c69d6c41-b3f4-4033-989c-a651cc9770f9}">
+		<property name="assetPath">
+			<value>musicless.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>59.350249433106576</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{53e634b8-4698-405d-80b6-197f04df4684}</destination>
+		</relationship>
+	</object>
+</objects>

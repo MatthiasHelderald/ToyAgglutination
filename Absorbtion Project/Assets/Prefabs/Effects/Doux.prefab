@@ -18,6 +18,8 @@ GameObject:
   - component: {fileID: 8137647555977548081}
   - component: {fileID: -5309363305090273450}
   - component: {fileID: -6597803416110023196}
+  - component: {fileID: -1502586104802488039}
+  - component: {fileID: -1867332624224425046}
   m_Layer: 0
   m_Name: Doux
   m_TagString: Squareblock
@@ -170,6 +172,7 @@ MonoBehaviour:
   timer: 5
   countdown: 5
   mergecounter: 1
+  mergeLimit: 10
   blackholenb: 100
   blackholestate: 0
   mySquareType: 1
@@ -177,6 +180,7 @@ MonoBehaviour:
   drag: 0
   gradForce: 5
   findAllSquare: {fileID: 0}
+  squareSpawner: {fileID: 0}
 --- !u!114 &4574457296459257773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,3 +296,63 @@ MonoBehaviour:
   visualEffect: {fileID: 8137647555977548081}
   body: {fileID: 0}
   speed: 0
+--- !u!114 &-1502586104802488039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2517673374577555983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -442054117
+      Data2: 1214981928
+      Data3: 2093331605
+      Data4: -1037377431
+    Path: event:/Fireworks
+  Event: 
+  PlayEvent: 9
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &-1867332624224425046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2517673374577555983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: -1
+  OverrideMaxDistance: -1

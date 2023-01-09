@@ -16,7 +16,7 @@ public class Transition : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -49,6 +49,7 @@ public class Transition : MonoBehaviour
             }
             findAllSquare.blocks = (SquareBehavior[])FindObjectsOfType (typeof (SquareBehavior));
             timer = 0;
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Transition");
         }
         if (timer >= transitionTimer-1)
         {

@@ -44,6 +44,7 @@ public class SquareBehavior : MonoBehaviour
     public FindAllSquare findAllSquare;
     public SquareSpawner squareSpawner;
 
+
     private void Start()
     {
         body = GetComponent<Rigidbody2D>();
