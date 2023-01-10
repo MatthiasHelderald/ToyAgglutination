@@ -47,7 +47,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2517673374577555983}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -154,6 +154,7 @@ MonoBehaviour:
   timer: 5
   countdown: 5
   mergecounter: 1
+  mergeLimit: 10
   blackholenb: 100
   blackholestate: 0
   mySquareType: 0
@@ -161,6 +162,8 @@ MonoBehaviour:
   drag: 0
   gradForce: 50
   findAllSquare: {fileID: 0}
+  squareSpawner: {fileID: 0}
+  visualEffect: {fileID: 2296928869845497928}
 --- !u!114 &4574457296459257773
 MonoBehaviour:
   m_ObjectHideFlags: 0

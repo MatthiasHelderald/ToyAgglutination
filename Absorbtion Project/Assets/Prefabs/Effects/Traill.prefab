@@ -170,6 +170,7 @@ MonoBehaviour:
   timer: 5
   countdown: 5
   mergecounter: 1
+  mergeLimit: 10
   blackholenb: 100
   blackholestate: 0
   mySquareType: 1
@@ -177,6 +178,8 @@ MonoBehaviour:
   drag: 0
   gradForce: 50
   findAllSquare: {fileID: 0}
+  squareSpawner: {fileID: 0}
+  visualEffect: {fileID: 913020129444726957}
 --- !u!114 &4574457296459257773
 MonoBehaviour:
   m_ObjectHideFlags: 0

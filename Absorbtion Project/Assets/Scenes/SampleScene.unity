@@ -713,7 +713,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -1, y: -2}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1091591525
 MonoBehaviour:
@@ -2501,7 +2501,7 @@ MonoBehaviour:
   findAllSquare: {fileID: 1912556419}
   image: {fileID: 1091591525}
   c: {r: 0, g: 0, b: 0, a: 0}
-  transitionTimer: 10
+  transitionTimer: 60
 --- !u!114 &1912556422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2530,14 +2530,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   square: {fileID: 2517673374577555983, guid: e162019c917c6f544b381202f7ea37fb, type: 3}
   square_selection:
-  - {fileID: 2517673374577555983, guid: 8a326efa33854064085ea884978d8d51, type: 3}
+  - {fileID: 2517673374577555983, guid: 54ebb363fcc84ef42a8e27cb8e20b8e5, type: 3}
   - {fileID: 2517673374577555983, guid: ebd153a4cc1281a4ab593445d9454ad4, type: 3}
+  - {fileID: 2517673374577555983, guid: c71fd0b2866edc34aad1895e6d40f40c, type: 3}
+  - {fileID: 2517673374577555983, guid: de6211a1c39b724418824612ed435357, type: 3}
+  - {fileID: 2517673374577555983, guid: 8a326efa33854064085ea884978d8d51, type: 3}
   - {fileID: 2517673374577555983, guid: 0c874c652085bf947a5f1780ccb9764a, type: 3}
   - {fileID: 2517673374577555983, guid: 45536e6c6beec3d4d936053114ad6ad9, type: 3}
   - {fileID: 2517673374577555983, guid: ad811d2b50c1c134db35cd7c13ee743a, type: 3}
-  - {fileID: 2517673374577555983, guid: de6211a1c39b724418824612ed435357, type: 3}
-  - {fileID: 2517673374577555983, guid: c71fd0b2866edc34aad1895e6d40f40c, type: 3}
-  - {fileID: 2517673374577555983, guid: a33d1038b2a11f44a8fe94363ca778f0, type: 3}
   squareIndex: 0
   mouseOnObject: 0
   timer: 0.1

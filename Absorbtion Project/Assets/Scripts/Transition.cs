@@ -13,6 +13,8 @@ public class Transition : MonoBehaviour
 
     float timer = 0f;
     public float transitionTimer = 10;
+
+    bool transition;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +30,7 @@ public class Transition : MonoBehaviour
             c = image.color;
             c.a = (-timer+1);
             image.color = c;
+            transition = true;
         }
         if (timer >= transitionTimer)
         {
@@ -49,14 +52,18 @@ public class Transition : MonoBehaviour
             }
             findAllSquare.blocks = (SquareBehavior[])FindObjectsOfType (typeof (SquareBehavior));
             timer = 0;
-            FMODUnity.RuntimeManager.PlayOneShot("event:/Transition");
         }
         if (timer >= transitionTimer-1)
         {
             c = image.color;
-            c.a = ((timer-9)/(transitionTimer-9));
-            c.a = (timer-9)/(transitionTimer-9);
+            c.a = ((timer-(transitionTimer-2))/(transitionTimer-(transitionTimer-2)));
+            c.a = (timer-(transitionTimer-2))/(transitionTimer-(transitionTimer-2));
             image.color = c;
+            if (transition == true)
+            {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Transition");
+                transition = false;
+            }
         }
     }
 }
