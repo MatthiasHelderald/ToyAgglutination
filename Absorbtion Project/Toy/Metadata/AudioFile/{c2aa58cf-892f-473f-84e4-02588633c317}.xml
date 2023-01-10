@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{c2aa58cf-892f-473f-84e4-02588633c317}">
+		<property name="assetPath">
+			<value>merge1.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.42999999999999999</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{53e634b8-4698-405d-80b6-197f04df4684}</destination>
+		</relationship>
+	</object>
+</objects>

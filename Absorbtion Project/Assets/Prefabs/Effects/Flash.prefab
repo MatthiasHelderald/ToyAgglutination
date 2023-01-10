@@ -17,6 +17,8 @@ GameObject:
   - component: {fileID: 4574457296459257773}
   - component: {fileID: 8137647555977548081}
   - component: {fileID: -5309363305090273450}
+  - component: {fileID: 8843612122560363804}
+  - component: {fileID: 8242686526364528216}
   m_Layer: 0
   m_Name: Flash
   m_TagString: Squareblock
@@ -169,6 +171,7 @@ MonoBehaviour:
   timer: 5
   countdown: 5
   mergecounter: 1
+  mergeLimit: 10
   blackholenb: 100
   blackholestate: 0
   mySquareType: 1
@@ -176,6 +179,7 @@ MonoBehaviour:
   drag: 0
   gradForce: 50
   findAllSquare: {fileID: 0}
+  squareSpawner: {fileID: 0}
 --- !u!114 &4574457296459257773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338,3 +342,63 @@ VFXRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &8843612122560363804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2517673374577555983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1560855278
+      Data2: 1134330060
+      Data3: 1637991854
+      Data4: 1618627246
+    Path: event:/Merge
+  Event: 
+  PlayEvent: 9
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &8242686526364528216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2517673374577555983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1433800722
+      Data2: 1324406664
+      Data3: -1605354601
+      Data4: 1952669086
+    Path: event:/Pulsating
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20

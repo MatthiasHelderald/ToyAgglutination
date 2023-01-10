@@ -1,5 +1,60 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8900020256310298503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Twinkling
+  m_EditorClassIdentifier: 
+  Path: event:/Twinkling
+  Guid:
+    Data1: 1857424144
+    Data2: 1338926036
+    Data3: 1352833460
+    Data4: -1192666574
+  Banks:
+  - {fileID: -3399412693695515948}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 18000
+--- !u!114 &-6830984811265662453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music
+  m_EditorClassIdentifier: 
+  Path: event:/Music
+  Guid:
+    Data1: 676168560
+    Data2: 1149441081
+    Data3: -53312329
+    Data4: -300791598
+  Banks:
+  - {fileID: -3399412693695515948}
+  - {fileID: -5727838622178126498}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-5727838622178126498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,10 +70,10 @@ MonoBehaviour:
   Path: Toy/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638089032898157848
+  lastModified: 638089247647982044
   FileSizes:
   - Name: Desktop
-    Value: 351072
+    Value: 854560
   Exists: 1
 --- !u!114 &-4787431189837435675
 MonoBehaviour:
@@ -48,6 +103,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 59350
+--- !u!114 &-4764025534155234467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Spawn
+  m_EditorClassIdentifier: 
+  Path: event:/Spawn
+  Guid:
+    Data1: -511270151
+    Data2: 1148721358
+    Data3: -1498595148
+    Data4: 191458744
+  Banks:
+  - {fileID: -3399412693695515948}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-3399412693695515948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,10 +145,10 @@ MonoBehaviour:
   Path: Toy/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638089032897804785
+  lastModified: 638089247647366548
   FileSizes:
   - Name: Desktop
-    Value: 616128
+    Value: 1510752
   Exists: 1
 --- !u!114 &-2325297098042000366
 MonoBehaviour:
@@ -95,30 +177,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-2077799764287513254
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Fuse/Parameter 1
-  m_EditorClassIdentifier: 
-  Name: Parameter 1
-  StudioPath: 
-  Min: 0
-  Max: 10
-  Default: 0
-  ID:
-    data1: 918390741
-    data2: 2875398523
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
 --- !u!114 &-1722557501610447349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,8 +200,7 @@ MonoBehaviour:
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
-  Parameters:
-  - {fileID: -2077799764287513254}
+  Parameters: []
   MinDistance: 1
   MaxDistance: 20
   Length: 12300
@@ -162,10 +219,10 @@ MonoBehaviour:
   Path: Toy/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638089032897853611
+  lastModified: 638089247647431675
   FileSizes:
   - Name: Desktop
-    Value: 1038
+    Value: 1246
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -189,12 +246,17 @@ MonoBehaviour:
   - {fileID: 1918780418449398149}
   - {fileID: -1722557501610447349}
   - {fileID: 5735231494666251378}
+  - {fileID: 1988969010412125585}
+  - {fileID: 7460432893759267446}
+  - {fileID: -6830984811265662453}
+  - {fileID: -8900020256310298503}
+  - {fileID: -4764025534155234467}
   EditorParameters: []
   MasterBanks:
   - {fileID: -3399412693695515948}
   StringsBanks:
   - {fileID: -367640758575861234}
-  cacheTime: 638089032898157848
+  cacheTime: 638089247647982044
   cacheVersion: 131601
 --- !u!114 &1918780418449398149
 MonoBehaviour:
@@ -223,6 +285,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &1988969010412125585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Bubbling
+  m_EditorClassIdentifier: 
+  Path: event:/Bubbling
+  Guid:
+    Data1: -1174925703
+    Data2: 1156425807
+    Data3: 2145981357
+    Data4: 1268043724
+  Banks:
+  - {fileID: -3399412693695515948}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1440
 --- !u!114 &5735231494666251378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,4 +338,31 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 2000
+  Length: 1940
+--- !u!114 &7460432893759267446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Merge
+  m_EditorClassIdentifier: 
+  Path: event:/Merge
+  Guid:
+    Data1: -1560855278
+    Data2: 1134330060
+    Data3: 1637991854
+    Data4: 1618627246
+  Banks:
+  - {fileID: -3399412693695515948}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
