@@ -8,6 +8,8 @@ public class BackgroundBehavior : MonoBehaviour
     private FMOD.Studio.EventInstance event_music;
     private bool MusicActive;
 
+    private int transiValue = 0;
+
     void Start()
     {
         MusicActive = false;
@@ -20,12 +22,31 @@ public class BackgroundBehavior : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            instance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             MusicActive = true;
         }
         if (MusicActive == true)
         {
-            event_music.start();
+            if (transiValue < 300)
+            {
+                transiValue++;
+                instance.setParameterByName("Fade", transiValue);
+            }
+            else
+            {
+                instance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                event_music.start();
+            }
+        }
+        if (Input.GetKeyDown("x"))
+        {
+            MusicActive = false;
+            event_music.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            instance.start();
+            if (transiValue > 1)
+            {
+                transiValue--;
+                instance.setParameterByName("Fade", transiValue);
+            }
         }
     }
 }

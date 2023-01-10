@@ -69,10 +69,10 @@ MonoBehaviour:
   Path: Toy/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638089468436826119
+  lastModified: 638089643222094388
   FileSizes:
   - Name: Desktop
-    Value: 854560
+    Value: 855136
   Exists: 1
 --- !u!114 &-4787431189837435675
 MonoBehaviour:
@@ -98,7 +98,8 @@ MonoBehaviour:
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: 6426402306177853194}
   MinDistance: 1
   MaxDistance: 20
   Length: 59350
@@ -144,10 +145,10 @@ MonoBehaviour:
   Path: Toy/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638089468436514665
+  lastModified: 638089643221876352
   FileSizes:
   - Name: Desktop
-    Value: 1510976
+    Value: 1511680
   Exists: 1
 --- !u!114 &-2979116892742110540
 MonoBehaviour:
@@ -219,10 +220,10 @@ MonoBehaviour:
   Path: Toy/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638089468436536390
+  lastModified: 638089643221891550
   FileSizes:
   - Name: Desktop
-    Value: 1246
+    Value: 1294
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -256,7 +257,7 @@ MonoBehaviour:
   - {fileID: -3399412693695515948}
   StringsBanks:
   - {fileID: -367640758575861234}
-  cacheTime: 638089468436826119
+  cacheTime: 638089643222094388
   cacheVersion: 131601
 --- !u!114 &3218198643518912985
 MonoBehaviour:
@@ -339,6 +340,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1940
+--- !u!114 &6426402306177853194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Musicless/Fade
+  m_EditorClassIdentifier: 
+  Name: Fade
+  StudioPath: 
+  Min: 0
+  Max: 300
+  Default: 0
+  ID:
+    data1: 1039899808
+    data2: 1509681196
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &7726541418548166000
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -81,7 +81,7 @@ public class SquareBehavior : MonoBehaviour
             {
                 Destroy(collision.gameObject);
 
-                transform.localScale = new Vector2(0.5f * mergecounter, 0.5f * mergecounter);
+                transform.localScale = new Vector2(2f * mergecounter, 2f * mergecounter);
 
             }
             if ( mergecounter > mergecompare & blackholestate & true)
@@ -176,7 +176,6 @@ public class SquareBehavior : MonoBehaviour
                 }
                 completeRotation += 1;
                 rot = true;
-                Debug.Log(completeRotation);
             }
             if (worldPosition.y > 0 && transform.position.y < 0 || worldPosition.y < 0 && transform.position.y > 0)
             {
@@ -186,7 +185,6 @@ public class SquareBehavior : MonoBehaviour
                 }
                 completeRotation += 1;
                 rot = false;
-                Debug.Log(completeRotation);
             }
 
             if (completeRotation >= 4)

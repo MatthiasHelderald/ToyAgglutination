@@ -31,7 +31,6 @@ public class SelectorScript : MonoBehaviour
         if (Input.GetMouseButtonDown(1))
         {
             var cubeRenderer = gameObject.GetComponent<SquareBehavior>().GetComponent<Renderer>();
-            cubeRenderer.material.SetColor("_Color", Color.green);
             selected = true;
         }
         
