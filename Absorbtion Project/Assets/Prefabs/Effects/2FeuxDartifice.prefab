@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 8335172610537510812}
   - component: {fileID: 8531180735735004966}
   - component: {fileID: 4574457296459257773}
-  - component: {fileID: 6084124460138950170}
   - component: {fileID: 2598290738651281125}
   - component: {fileID: -4877240177479861664}
   - component: {fileID: -1164086889888143257}
@@ -197,18 +196,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   square: {fileID: 2517673374577555983}
   selected: 0
---- !u!122 &6084124460138950170
-Halo:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2517673374577555983}
-  m_Enabled: 1
-  m_Color:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_Size: 5
 --- !u!2083052967 &2598290738651281125
 VisualEffect:
   m_ObjectHideFlags: 0
