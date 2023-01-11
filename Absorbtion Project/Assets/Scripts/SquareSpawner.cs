@@ -22,13 +22,7 @@ public class SquareSpawner : MonoBehaviour
         {
             Vector3 ray = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             ray.z = 0;
-            if (Physics.Raycast(ray, out objet))
-            {
-                if (!objet.collider.gameObject.tag("Squareblock")) 
-                {
-                    Instantiate(square.gameObject,ray,transform.rotation);
-                }
-            }
+            Instantiate(square.gameObject,ray,transform.rotation);
             
             if (timer < currentTime)
             {
