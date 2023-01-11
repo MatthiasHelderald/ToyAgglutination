@@ -15,10 +15,19 @@ public class Transition : MonoBehaviour
     float timer = 0f;
     public float transitionTimer = 10;
 
-    bool transition;
-
     float transiSons1;
     float transiSons2;
+
+    public Vector2 mousePos;
+    public Vector2 worldPosition;
+
+    public Vector2 mouseDelta
+    {
+        get
+        {
+            return new Vector2 (Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y) - worldPosition;
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -38,12 +47,13 @@ public class Transition : MonoBehaviour
 
             transiSons1 = -80 + c.a*40;
             backgroundBehavior.event_music.setParameterByName("transi"+(squareSpawner.squareIndex).ToString(), transiSons1);
+            backgroundBehavior.event_grab.setParameterByName("transi"+(squareSpawner.squareIndex).ToString(), transiSons1);
             transiSons2 = -80 - transiSons1;
             backgroundBehavior.event_music.setParameterByName("transi"+(squareSpawner.squareIndex+1).ToString(), transiSons2);
-            Debug.Log(new Vector2(transiSons1, transiSons2));
+            backgroundBehavior.event_grab.setParameterByName("transi"+(squareSpawner.squareIndex+1).ToString(), transiSons2);
 
-            transition = true;
         }
+
         if (timer >= transitionTimer)
         {
             if(squareSpawner.squareIndex < 7)
@@ -73,12 +83,26 @@ public class Transition : MonoBehaviour
 
             transiSons1 = -(timer-(transitionTimer-2))/(transitionTimer-(transitionTimer-2))*40;
             backgroundBehavior.event_music.setParameterByName("transi"+(squareSpawner.squareIndex+1).ToString(), transiSons1);
+            backgroundBehavior.event_grab.setParameterByName("transi"+(squareSpawner.squareIndex+1).ToString(), transiSons1);
             transiSons2 = -80 - transiSons1;
-            
-            if (squareSpawner.squareIndex != 6)
-            {backgroundBehavior.event_music.setParameterByName("transi"+(squareSpawner.squareIndex+2).ToString(), transiSons2);}
 
-            else{backgroundBehavior.event_music.setParameterByName("transi1", transiSons2);}
+            if (squareSpawner.squareIndex != 6)
+            {
+                backgroundBehavior.event_music.setParameterByName("transi"+(squareSpawner.squareIndex+2).ToString(), transiSons2);
+                backgroundBehavior.event_grab.setParameterByName("transi"+(squareSpawner.squareIndex+2).ToString(), transiSons2);
+            }
+
+            else
+            {
+                backgroundBehavior.event_music.setParameterByName("transi1", transiSons2);
+                backgroundBehavior.event_grab.setParameterByName("transi1", transiSons2);
+            }
         }
+    }
+    void FixedUpdate() 
+    {
+        mousePos = Input.mousePosition;
+        worldPosition = Camera.main.ScreenToWorldPoint(mousePos);
+        backgroundBehavior.event_grab.setParameterByName("Speed", mouseDelta.magnitude);
     }
 }

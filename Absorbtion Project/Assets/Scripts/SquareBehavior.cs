@@ -34,7 +34,6 @@ public class SquareBehavior : MonoBehaviour
     [Header("Etat du grab")]
     public SquareTypes mySquareType;
     private bool rot;
-    private int completeRotation;
 
     float mass;
     [Tooltip("Froce de la gravité")]
@@ -182,7 +181,6 @@ public class SquareBehavior : MonoBehaviour
         {
             drag = false;
             mySquareType = SquareTypes.orbite;
-            completeRotation = 0;
         }
     }
 }

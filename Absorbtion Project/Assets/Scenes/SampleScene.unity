@@ -1673,7 +1673,9 @@ MonoBehaviour:
   backgroundBehavior: {fileID: 1912556425}
   image: {fileID: 1091591525}
   c: {r: 0, g: 0, b: 0, a: 0}
-  transitionTimer: 10
+  transitionTimer: 60
+  mousePos: {x: 0, y: 0}
+  worldPosition: {x: 0, y: 0}
 --- !u!114 &1912556422
 MonoBehaviour:
   m_ObjectHideFlags: 0
