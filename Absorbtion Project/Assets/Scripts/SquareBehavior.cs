@@ -98,11 +98,6 @@ public class SquareBehavior : MonoBehaviour
             drag = false;
         }
 
-        if (Input.GetKeyDown("x"))
-        {
-            Destroy(gameObject);
-        }
-
         if (mergecounter >= mergeLimit)
         {
             for(int i = 0; i < mergeLimit; i++) 
