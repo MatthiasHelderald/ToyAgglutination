@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{07e4f3fb-4d46-4690-9139-d814501685ca}">
 		<property name="name">
-			<value>Spawn3</value>
+			<value>Spawn2</value>
 		</property>
 		<property name="outputFormat">
 			<value>2</value>
@@ -80,9 +80,6 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{c1b2822b-69db-4428-99db-017fc57380ca}">
-		<property name="volume">
-			<value>-7.5</value>
-		</property>
 		<relationship name="effectChain">
 			<destination>{939340fc-6f72-49ea-838d-0ca4fcc7096f}</destination>
 		</relationship>
@@ -126,6 +123,9 @@
 	</object>
 	<object class="MixerBusPanner" id="{c08df371-d4d3-42ea-b6f0-3f35aa16b00d}" />
 	<object class="MultiSound" id="{4fd2b7fa-ade1-480d-9300-d2112aedd9a9}">
+		<property name="playlistMode">
+			<value>1</value>
+		</property>
 		<relationship name="sounds">
 			<destination>{720d56a2-df7d-4bf6-8c6a-64d6a814b177}</destination>
 			<destination>{80d965ea-db3f-444d-bef6-105bd0f8f3af}</destination>

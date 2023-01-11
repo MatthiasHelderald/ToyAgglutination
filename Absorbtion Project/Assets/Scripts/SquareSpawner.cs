@@ -23,7 +23,8 @@ public class SquareSpawner : MonoBehaviour
             Vector3 ray = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             ray.z = 0;
             Instantiate(square.gameObject,ray,transform.rotation);
-            
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Spawn" + (squareIndex).ToString());
+
             if (timer < currentTime)
             {
                 //Instantiate(square.gameObject,ray,transform.rotation);

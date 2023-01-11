@@ -116,6 +116,7 @@ public class SquareBehavior : MonoBehaviour
                     newBloc.GetComponent<SquareBehavior>().drag = true;
                 }
             }
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Implosion" + (squareSpawner.squareIndex).ToString());
             Destroy(gameObject);
         }
         if (body.velocity.magnitude >500)
