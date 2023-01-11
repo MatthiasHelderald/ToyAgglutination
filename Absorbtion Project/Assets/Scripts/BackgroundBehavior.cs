@@ -5,7 +5,7 @@ using UnityEngine;
 public class BackgroundBehavior : MonoBehaviour
 {
     private FMOD.Studio.EventInstance instance;
-    private FMOD.Studio.EventInstance event_music;
+    public FMOD.Studio.EventInstance event_music;
     private bool MusicActive;
 
     void Start()
@@ -25,10 +25,6 @@ public class BackgroundBehavior : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown("x"))
-        {
-            event_music.setParameterByName("transi1", -80);
-            event_music.setParameterByName("transi2", 0);
-        }
+
     }
 }

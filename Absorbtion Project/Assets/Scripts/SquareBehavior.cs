@@ -81,7 +81,7 @@ public class SquareBehavior : MonoBehaviour
             {
                 Destroy(collision.gameObject);
 
-                transform.localScale = new Vector2(2f * mergecounter, 2f * mergecounter);
+                transform.localScale = new Vector2(0.5f * mergecounter, 0.5f * mergecounter);
 
             }
             if ( mergecounter > mergecompare & blackholestate & true)
@@ -166,30 +166,6 @@ public class SquareBehavior : MonoBehaviour
                 case SquareTypes.blackhole:
                     body.velocity = new Vector2((worldPosition.x - transform.position.x) * gradForce, (worldPosition.y - transform.position.y)*gradForce);
                     break;
-            }
-
-            if (worldPosition.x > 0 && transform.position.x < 0 || worldPosition.x < 0 && transform.position.x > 0)
-            {
-                if (rot == true)
-                {
-                    completeRotation = 0;
-                }
-                completeRotation += 1;
-                rot = true;
-            }
-            if (worldPosition.y > 0 && transform.position.y < 0 || worldPosition.y < 0 && transform.position.y > 0)
-            {
-                if (rot == false)
-                {
-                    completeRotation = 0;
-                }
-                completeRotation += 1;
-                rot = false;
-            }
-
-            if (completeRotation >= 4)
-            {
-                mySquareType = SquareTypes.orbite;
             }
         }
     }

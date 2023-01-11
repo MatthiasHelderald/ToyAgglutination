@@ -7,6 +7,7 @@ public class Transition : MonoBehaviour
 {
     public SquareSpawner squareSpawner;
     public FindAllSquare findAllSquare;
+    public BackgroundBehavior backgroundBehavior;
 
     public Image image;
     public Color c;
@@ -19,17 +20,15 @@ public class Transition : MonoBehaviour
     float transiSons1;
     float transiSons2;
 
-    private FMOD.Studio.EventInstance music;
     // Start is called before the first frame update
     void Start()
     {
-        music = FMODUnity.RuntimeManager.CreateInstance("event:/Music");
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("transi"+(squareSpawner.squareIndex).ToString());
         timer += Time.deltaTime;
         if (timer <= 2)
         {
@@ -37,56 +36,11 @@ public class Transition : MonoBehaviour
             c.a = (-timer+2)/2;
             image.color = c;
 
-            if (squareSpawner.squareIndex == 0)
-            {
-                transiSons1 = -80 + c.a*40;
-                music.setParameterByName("transi7", transiSons1);
-                transiSons2 = -80 - transiSons1;
-                music.setParameterByName("transi1", transiSons2);
-            }
-            if (squareSpawner.squareIndex == 1)
-            {
-                transiSons1 = -80 + c.a*40;
-                music.setParameterByName("transi1", transiSons1);
-                transiSons2 = -80 - transiSons1;
-                music.setParameterByName("transi2", transiSons2);
-            }
-            if (squareSpawner.squareIndex == 2)
-            {
-                transiSons1 = -80 + c.a*40;
-                music.setParameterByName("transi2", transiSons1);
-                transiSons2 = -80 - transiSons1;
-                music.setParameterByName("transi3", transiSons2);
-            }
-            if (squareSpawner.squareIndex == 3)
-            {
-                transiSons1 = -80 + c.a*40;
-                music.setParameterByName("transi3", transiSons1);
-                transiSons2 = -80 - transiSons1;
-                music.setParameterByName("transi4", transiSons2);
-            }
-            if (squareSpawner.squareIndex == 4)
-            {
-                transiSons1 = -80 + c.a*40;
-                music.setParameterByName("transi4", transiSons1);
-                transiSons2 = -80 - transiSons1;
-                music.setParameterByName("transi5", transiSons2);
-            }
-            if (squareSpawner.squareIndex == 5)
-            {
-                transiSons1 = -80 + c.a*40;
-                music.setParameterByName("transi5", transiSons1);
-                transiSons2 = -80 - transiSons1;
-                music.setParameterByName("transi6", transiSons2);
-            }
-            if (squareSpawner.squareIndex == 6)
-            {
-                transiSons1 = -80 + c.a*40;
-                music.setParameterByName("transi6", transiSons1);
-                transiSons2 = -80 - transiSons1;
-                music.setParameterByName("transi7", transiSons2);
-            }
-
+            transiSons1 = -80 + c.a*40;
+            backgroundBehavior.event_music.setParameterByName("transi"+(squareSpawner.squareIndex).ToString(), transiSons1);
+            transiSons2 = -80 - transiSons1;
+            backgroundBehavior.event_music.setParameterByName("transi"+(squareSpawner.squareIndex+1).ToString(), transiSons2);
+            Debug.Log(new Vector2(transiSons1, transiSons2));
 
             transition = true;
         }
@@ -117,55 +71,14 @@ public class Transition : MonoBehaviour
             c.a = (timer-(transitionTimer-2))/(transitionTimer-(transitionTimer-2));
             image.color = c;
 
-            if (squareSpawner.squareIndex == 0)
-            {
-                transiSons1 = -(timer-(transitionTimer-2))/(transitionTimer-(transitionTimer-2))*40;
-                music.setParameterByName("transi7", transiSons1);
-                transiSons2 = -80 - transiSons1;
-                music.setParameterByName("transi1", transiSons2);
-            }
-            if (squareSpawner.squareIndex == 1)
-            {
-                transiSons1 = -(timer-(transitionTimer-2))/(transitionTimer-(transitionTimer-2))*40;
-                music.setParameterByName("transi1", transiSons1);
-                transiSons2 = -80 - transiSons1;
-                music.setParameterByName("transi2", transiSons2);
-            }
-            if (squareSpawner.squareIndex == 2)
-            {
-                transiSons1 = -(timer-(transitionTimer-2))/(transitionTimer-(transitionTimer-2))*40;
-                music.setParameterByName("transi2", transiSons1);
-                transiSons2 = -80 - transiSons1;
-                music.setParameterByName("transi3", transiSons2);
-            }
-            if (squareSpawner.squareIndex == 3)
-            {
-                transiSons1 = -(timer-(transitionTimer-2))/(transitionTimer-(transitionTimer-2))*40;
-                music.setParameterByName("transi3", transiSons1);
-                transiSons2 = -80 - transiSons1;
-                music.setParameterByName("transi4", transiSons2);
-            }
-            if (squareSpawner.squareIndex == 4)
-            {
-                transiSons1 = -(timer-(transitionTimer-2))/(transitionTimer-(transitionTimer-2))*40;
-                music.setParameterByName("transi4", transiSons1);
-                transiSons2 = -80 - transiSons1;
-                music.setParameterByName("transi5", transiSons2);
-            }
-            if (squareSpawner.squareIndex == 5)
-            {
-                transiSons1 = -(timer-(transitionTimer-2))/(transitionTimer-(transitionTimer-2))*40;
-                music.setParameterByName("transi5", transiSons1);
-                transiSons2 = -80 - transiSons1;
-                music.setParameterByName("transi6", transiSons2);
-            }
-            if (squareSpawner.squareIndex == 6)
-            {
-                transiSons1 = -(timer-(transitionTimer-2))/(transitionTimer-(transitionTimer-2))*40;
-                music.setParameterByName("transi6", transiSons1);
-                transiSons2 = -80 - transiSons1;
-                music.setParameterByName("transi7", transiSons2);
-            }
+            transiSons1 = -(timer-(transitionTimer-2))/(transitionTimer-(transitionTimer-2))*40;
+            backgroundBehavior.event_music.setParameterByName("transi"+(squareSpawner.squareIndex+1).ToString(), transiSons1);
+            transiSons2 = -80 - transiSons1;
+            
+            if (squareSpawner.squareIndex != 6)
+            {backgroundBehavior.event_music.setParameterByName("transi"+(squareSpawner.squareIndex+2).ToString(), transiSons2);}
+
+            else{backgroundBehavior.event_music.setParameterByName("transi1", transiSons2);}
         }
     }
 }
