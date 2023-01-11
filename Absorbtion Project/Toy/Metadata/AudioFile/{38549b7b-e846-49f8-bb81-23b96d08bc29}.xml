@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{38549b7b-e846-49f8-bb81-23b96d08bc29}">
+		<property name="assetPath">
+			<value>truemusic7spawn1.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{53e634b8-4698-405d-80b6-197f04df4684}</destination>
+		</relationship>
+	</object>
+</objects>

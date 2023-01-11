@@ -15,21 +15,79 @@ public class Transition : MonoBehaviour
     public float transitionTimer = 10;
 
     bool transition;
+
+    float transiSons1;
+    float transiSons2;
+
+    private FMOD.Studio.EventInstance music;
     // Start is called before the first frame update
     void Start()
     {
-
+        music = FMODUnity.RuntimeManager.CreateInstance("event:/Music");
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("transi"+(squareSpawner.squareIndex).ToString());
         timer += Time.deltaTime;
-        if (timer <= 1)
+        if (timer <= 2)
         {
             c = image.color;
-            c.a = (-timer+1);
+            c.a = (-timer+2)/2;
             image.color = c;
+
+            if (squareSpawner.squareIndex == 0)
+            {
+                transiSons1 = -80 + c.a*40;
+                music.setParameterByName("transi7", transiSons1);
+                transiSons2 = -80 - transiSons1;
+                music.setParameterByName("transi1", transiSons2);
+            }
+            if (squareSpawner.squareIndex == 1)
+            {
+                transiSons1 = -80 + c.a*40;
+                music.setParameterByName("transi1", transiSons1);
+                transiSons2 = -80 - transiSons1;
+                music.setParameterByName("transi2", transiSons2);
+            }
+            if (squareSpawner.squareIndex == 2)
+            {
+                transiSons1 = -80 + c.a*40;
+                music.setParameterByName("transi2", transiSons1);
+                transiSons2 = -80 - transiSons1;
+                music.setParameterByName("transi3", transiSons2);
+            }
+            if (squareSpawner.squareIndex == 3)
+            {
+                transiSons1 = -80 + c.a*40;
+                music.setParameterByName("transi3", transiSons1);
+                transiSons2 = -80 - transiSons1;
+                music.setParameterByName("transi4", transiSons2);
+            }
+            if (squareSpawner.squareIndex == 4)
+            {
+                transiSons1 = -80 + c.a*40;
+                music.setParameterByName("transi4", transiSons1);
+                transiSons2 = -80 - transiSons1;
+                music.setParameterByName("transi5", transiSons2);
+            }
+            if (squareSpawner.squareIndex == 5)
+            {
+                transiSons1 = -80 + c.a*40;
+                music.setParameterByName("transi5", transiSons1);
+                transiSons2 = -80 - transiSons1;
+                music.setParameterByName("transi6", transiSons2);
+            }
+            if (squareSpawner.squareIndex == 6)
+            {
+                transiSons1 = -80 + c.a*40;
+                music.setParameterByName("transi6", transiSons1);
+                transiSons2 = -80 - transiSons1;
+                music.setParameterByName("transi7", transiSons2);
+            }
+
+
             transition = true;
         }
         if (timer >= transitionTimer)
@@ -53,16 +111,60 @@ public class Transition : MonoBehaviour
             findAllSquare.blocks = (SquareBehavior[])FindObjectsOfType (typeof (SquareBehavior));
             timer = 0;
         }
-        if (timer >= transitionTimer-1)
+        if (timer >= transitionTimer-2)
         {
             c = image.color;
-            c.a = ((timer-(transitionTimer-2))/(transitionTimer-(transitionTimer-2)));
             c.a = (timer-(transitionTimer-2))/(transitionTimer-(transitionTimer-2));
             image.color = c;
-            if (transition == true)
+
+            if (squareSpawner.squareIndex == 0)
             {
-                FMODUnity.RuntimeManager.PlayOneShot("event:/Transition");
-                transition = false;
+                transiSons1 = -(timer-(transitionTimer-2))/(transitionTimer-(transitionTimer-2))*40;
+                music.setParameterByName("transi7", transiSons1);
+                transiSons2 = -80 - transiSons1;
+                music.setParameterByName("transi1", transiSons2);
+            }
+            if (squareSpawner.squareIndex == 1)
+            {
+                transiSons1 = -(timer-(transitionTimer-2))/(transitionTimer-(transitionTimer-2))*40;
+                music.setParameterByName("transi1", transiSons1);
+                transiSons2 = -80 - transiSons1;
+                music.setParameterByName("transi2", transiSons2);
+            }
+            if (squareSpawner.squareIndex == 2)
+            {
+                transiSons1 = -(timer-(transitionTimer-2))/(transitionTimer-(transitionTimer-2))*40;
+                music.setParameterByName("transi2", transiSons1);
+                transiSons2 = -80 - transiSons1;
+                music.setParameterByName("transi3", transiSons2);
+            }
+            if (squareSpawner.squareIndex == 3)
+            {
+                transiSons1 = -(timer-(transitionTimer-2))/(transitionTimer-(transitionTimer-2))*40;
+                music.setParameterByName("transi3", transiSons1);
+                transiSons2 = -80 - transiSons1;
+                music.setParameterByName("transi4", transiSons2);
+            }
+            if (squareSpawner.squareIndex == 4)
+            {
+                transiSons1 = -(timer-(transitionTimer-2))/(transitionTimer-(transitionTimer-2))*40;
+                music.setParameterByName("transi4", transiSons1);
+                transiSons2 = -80 - transiSons1;
+                music.setParameterByName("transi5", transiSons2);
+            }
+            if (squareSpawner.squareIndex == 5)
+            {
+                transiSons1 = -(timer-(transitionTimer-2))/(transitionTimer-(transitionTimer-2))*40;
+                music.setParameterByName("transi5", transiSons1);
+                transiSons2 = -80 - transiSons1;
+                music.setParameterByName("transi6", transiSons2);
+            }
+            if (squareSpawner.squareIndex == 6)
+            {
+                transiSons1 = -(timer-(transitionTimer-2))/(transitionTimer-(transitionTimer-2))*40;
+                music.setParameterByName("transi6", transiSons1);
+                transiSons2 = -80 - transiSons1;
+                music.setParameterByName("transi7", transiSons2);
             }
         }
     }

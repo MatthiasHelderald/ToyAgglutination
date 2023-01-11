@@ -1,5 +1,56 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8001634688917721556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Spawn3
+  m_EditorClassIdentifier: 
+  Path: event:/Spawn3
+  Guid:
+    Data1: 132445179
+    Data2: 1183862086
+    Data3: 349714833
+    Data4: -897247664
+  Banks:
+  - {fileID: -3399412693695515948}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-6985313726263880022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/transi2
+  m_EditorClassIdentifier: 
+  Name: transi2
+  StudioPath: 
+  Min: -80
+  Max: 0
+  Default: 0
+  ID:
+    data1: 3468121162
+    data2: 450928668
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-6841911385198987778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27,7 +78,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-6505819239305668427
+--- !u!114 &-6701626405811762773
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -37,23 +88,47 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Twinkling
+  m_Name: event:/Spawn5
   m_EditorClassIdentifier: 
-  Path: event:/Twinkling
+  Path: event:/Spawn5
   Guid:
-    Data1: 1857424144
-    Data2: 1338926036
-    Data3: 1352833460
-    Data4: -1192666574
+    Data1: -1909919965
+    Data2: 1232328409
+    Data3: -2006990458
+    Data4: 1781627508
   Banks:
   - {fileID: -3399412693695515948}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 18000
+  Length: 0
+--- !u!114 &-5961557180919092776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/transi1
+  m_EditorClassIdentifier: 
+  Name: transi1
+  StudioPath: 
+  Min: -80
+  Max: 0
+  Default: 0
+  ID:
+    data1: 1881382490
+    data2: 960654608
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-5727838622178126498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,10 +144,10 @@ MonoBehaviour:
   Path: Toy/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638089643222094388
+  lastModified: 638090378852427376
   FileSizes:
   - Name: Desktop
-    Value: 855136
+    Value: 4794240
   Exists: 1
 --- !u!114 &-4787431189837435675
 MonoBehaviour:
@@ -103,7 +178,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 59350
---- !u!114 &-3612124834035072738
+--- !u!114 &-4393200082885414177
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -112,24 +187,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Bubbling
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/transi3
   m_EditorClassIdentifier: 
-  Path: event:/Bubbling
-  Guid:
-    Data1: -1174925703
-    Data2: 1156425807
-    Data3: 2145981357
-    Data4: 1268043724
-  Banks:
-  - {fileID: -3399412693695515948}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1440
+  Name: transi3
+  StudioPath: 
+  Min: -80
+  Max: 0
+  Default: 0
+  ID:
+    data1: 112087695
+    data2: 2118336952
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-3399412693695515948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,10 +217,10 @@ MonoBehaviour:
   Path: Toy/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638089643221876352
+  lastModified: 638090378851977028
   FileSizes:
   - Name: Desktop
-    Value: 1511680
+    Value: 8898624
   Exists: 1
 --- !u!114 &-2979116892742110540
 MonoBehaviour:
@@ -174,11 +246,18 @@ MonoBehaviour:
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: -4393200082885414177}
+  - {fileID: -2528684208489700871}
+  - {fileID: 4574965166166679094}
+  - {fileID: 5565848069181241936}
+  - {fileID: 487662726975887815}
+  - {fileID: -5961557180919092776}
+  - {fileID: -6985313726263880022}
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
---- !u!114 &-1302493064094550454
+  Length: 56000
+--- !u!114 &-2528684208489700871
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -187,24 +266,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Fireworks
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/transi6
   m_EditorClassIdentifier: 
-  Path: event:/Fireworks
-  Guid:
-    Data1: -442054117
-    Data2: 1214981928
-    Data3: 2093331605
-    Data4: -1037377431
-  Banks:
-  - {fileID: -3399412693695515948}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
+  Name: transi6
+  StudioPath: 
+  Min: -80
+  Max: 0
+  Default: 0
+  ID:
+    data1: 1314291852
+    data2: 625448047
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-367640758575861234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,11 +296,38 @@ MonoBehaviour:
   Path: Toy/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638089643221891550
+  lastModified: 638090378852007008
   FileSizes:
   - Name: Desktop
-    Value: 1294
+    Value: 1516
   Exists: 1
+--- !u!114 &-115811435886925198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Spawn4
+  m_EditorClassIdentifier: 
+  Path: event:/Spawn4
+  Guid:
+    Data1: -1336509732
+    Data2: 1227676869
+    Data3: -1715303022
+    Data4: -519401780
+  Banks:
+  - {fileID: -3399412693695515948}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,23 +346,49 @@ MonoBehaviour:
   - {fileID: -5727838622178126498}
   EditorEvents:
   - {fileID: -4787431189837435675}
-  - {fileID: -6505819239305668427}
-  - {fileID: 7726541418548166000}
-  - {fileID: -1302493064094550454}
   - {fileID: -6841911385198987778}
   - {fileID: -2979116892742110540}
-  - {fileID: -3612124834035072738}
-  - {fileID: 4482458593730466136}
-  - {fileID: 5235913358872704921}
-  - {fileID: 3218198643518912985}
+  - {fileID: 7659143031551607798}
+  - {fileID: 6486644734414354255}
+  - {fileID: -6701626405811762773}
+  - {fileID: 1154518823628651463}
+  - {fileID: 3482536966901612109}
+  - {fileID: 6455651434879089599}
+  - {fileID: 2634241058544831373}
+  - {fileID: -115811435886925198}
+  - {fileID: -8001634688917721556}
   EditorParameters: []
   MasterBanks:
   - {fileID: -3399412693695515948}
   StringsBanks:
   - {fileID: -367640758575861234}
-  cacheTime: 638089643222094388
+  cacheTime: 638090378852427376
   cacheVersion: 131601
---- !u!114 &3218198643518912985
+--- !u!114 &487662726975887815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/transi4
+  m_EditorClassIdentifier: 
+  Name: transi4
+  StudioPath: 
+  Min: -80
+  Max: 0
+  Default: 0
+  ID:
+    data1: 1284992023
+    data2: 3932418564
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &1154518823628651463
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -269,24 +398,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Spawn
+  m_Name: event:/Spawn6
   m_EditorClassIdentifier: 
-  Path: event:/Spawn
+  Path: event:/Spawn6
   Guid:
-    Data1: -511270151
-    Data2: 1148721358
-    Data3: -1498595148
-    Data4: 191458744
+    Data1: -1099115990
+    Data2: 1082860270
+    Data3: -453080175
+    Data4: -547180888
   Banks:
   - {fileID: -3399412693695515948}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &4482458593730466136
+--- !u!114 &2634241058544831373
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -296,24 +425,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Fuse
+  m_Name: event:/Grab
   m_EditorClassIdentifier: 
-  Path: event:/Fuse
+  Path: event:/Grab
   Guid:
-    Data1: 517385631
-    Data2: 1300625862
-    Data3: 468405679
-    Data4: 2066472379
+    Data1: -525921901
+    Data2: 1115522822
+    Data3: 631359166
+    Data4: 1465490313
   Banks:
   - {fileID: -3399412693695515948}
   IsStream: 1
   Is3D: 1
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 12300
---- !u!114 &5235913358872704921
+  Length: 0
+--- !u!114 &3482536966901612109
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -323,23 +452,71 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Pulsating
+  m_Name: event:/Spawn2
   m_EditorClassIdentifier: 
-  Path: event:/Pulsating
+  Path: event:/Spawn2
   Guid:
-    Data1: -1433800722
-    Data2: 1324406664
-    Data3: -1605354601
-    Data4: 1952669086
+    Data1: -58070165
+    Data2: 1319900736
+    Data3: -1690534507
+    Data4: -1481199922
   Banks:
   - {fileID: -3399412693695515948}
   IsStream: 0
   Is3D: 1
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1940
+  Length: 0
+--- !u!114 &4574965166166679094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/transi5
+  m_EditorClassIdentifier: 
+  Name: transi5
+  StudioPath: 
+  Min: -80
+  Max: 0
+  Default: 0
+  ID:
+    data1: 459531446
+    data2: 2730657574
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &5565848069181241936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/transi7
+  m_EditorClassIdentifier: 
+  Name: transi7
+  StudioPath: 
+  Min: -80
+  Max: 0
+  Default: 0
+  ID:
+    data1: 3756945375
+    data2: 701494015
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &6426402306177853194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -364,7 +541,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &7726541418548166000
+--- !u!114 &6455651434879089599
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -374,9 +551,63 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Merge
+  m_Name: event:/Spawn7
   m_EditorClassIdentifier: 
-  Path: event:/Merge
+  Path: event:/Spawn7
+  Guid:
+    Data1: -1219060612
+    Data2: 1335770363
+    Data3: -819495758
+    Data4: 754929209
+  Banks:
+  - {fileID: -3399412693695515948}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6486644734414354255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Spawn1
+  m_EditorClassIdentifier: 
+  Path: event:/Spawn1
+  Guid:
+    Data1: 130807827
+    Data2: 1338117916
+    Data3: 1056557713
+    Data4: -1296517619
+  Banks:
+  - {fileID: -3399412693695515948}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &7659143031551607798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Implosion
+  m_EditorClassIdentifier: 
+  Path: event:/Implosion
   Guid:
     Data1: -1560855278
     Data2: 1134330060

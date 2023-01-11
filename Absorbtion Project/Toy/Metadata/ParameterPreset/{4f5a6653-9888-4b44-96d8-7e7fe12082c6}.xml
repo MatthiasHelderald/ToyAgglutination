@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{4f5a6653-9888-4b44-96d8-7e7fe12082c6}">
+		<property name="name">
+			<value>transi5</value>
+		</property>
+		<relationship name="folder">
+			<destination>{bf79b1aa-ac89-44a8-a981-c34b0a03a7b9}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{d3f521fb-ba63-46ec-9aad-7c2165f6f510}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{d3f521fb-ba63-46ec-9aad-7c2165f6f510}">
+		<property name="minimum">
+			<value>-80</value>
+		</property>
+		<property name="maximum">
+			<value>0</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
