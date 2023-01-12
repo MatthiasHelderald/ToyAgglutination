@@ -984,8 +984,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 135.74442, y: 38.90617}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 139, y: 28}
+  m_SizeDelta: {x: 488.5298, y: 122.1324}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1380729524
 MonoBehaviour:
@@ -1088,19 +1088,20 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '<wiggle>Left Click to create a square
+  m_text: '<wiggle>Left Click to create an effect
 
 
-    Right Click to drag them'
+    Right Click to initiate Orbite
+    mode'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b13110a1bfcc3734d820a8f17efafa33, type: 2}
+  m_sharedMaterial: {fileID: 3588761349377089781, guid: b13110a1bfcc3734d820a8f17efafa33, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 16777215
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -1118,14 +1119,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15
-  m_fontSizeBase: 15
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1708,8 +1709,8 @@ MonoBehaviour:
   - {fileID: 2517673374577555983, guid: 54ebb363fcc84ef42a8e27cb8e20b8e5, type: 3}
   - {fileID: 2517673374577555983, guid: de6211a1c39b724418824612ed435357, type: 3}
   - {fileID: 2517673374577555983, guid: c71fd0b2866edc34aad1895e6d40f40c, type: 3}
-  - {fileID: 2517673374577555983, guid: ebd153a4cc1281a4ab593445d9454ad4, type: 3}
   - {fileID: 2517673374577555983, guid: 0c874c652085bf947a5f1780ccb9764a, type: 3}
+  - {fileID: 2517673374577555983, guid: ebd153a4cc1281a4ab593445d9454ad4, type: 3}
   - {fileID: 2517673374577555983, guid: ad811d2b50c1c134db35cd7c13ee743a, type: 3}
   - {fileID: 2517673374577555983, guid: 45536e6c6beec3d4d936053114ad6ad9, type: 3}
   squareIndex: 0

@@ -16,7 +16,7 @@ public class CameraScript : MonoBehaviour
     private Rigidbody2D body;
     bool drag = false;
     [Header("Mouvement camera")]
-    [Tooltip("Vitesse de suivie de la souris, Bas = fluide mais suis mal la souris / Haut = suis très bien la souris")]
+    [Tooltip("Vitesse de suivie de la souris, Bas = fluide mais suis mal la souris / Haut = suis trÃ¨s bien la souris")]
     public float dragForce = 50;
     [Tooltip("Ralentissement en %, Bas = lent / Haut = Rapide")]
     public float ralentissement = 10f;
@@ -27,7 +27,7 @@ public class CameraScript : MonoBehaviour
 
     private Vector2 mousePos;
 
-// Use this for initialization
+    // Use this for initialization
     void Start()
     {
         thisCamera = GetComponent<Camera>();
@@ -35,20 +35,20 @@ public class CameraScript : MonoBehaviour
         originalSize = thisCamera.orthographicSize;
     }
 
-// Update is called once per frame
+    // Update is called once per frame
     void Update()
     {
         float targetSize = originalSize * zoomFactor;
         if (targetSize != thisCamera.orthographicSize)
         {
-            thisCamera.orthographicSize = Mathf.Lerp(thisCamera.orthographicSize, targetSize, Time.deltaTime * zoomSpeed);
+            thisCamera.orthographicSize = Mathf.Lerp(thisCamera.orthographicSize, targetSize + 10, Time.deltaTime * zoomSpeed);
         }
-        
+
         if (Input.mouseScrollDelta.y < 0)
         {
             zumm += 1;
         }
-        if (Input.mouseScrollDelta.y > 0)
+        if (Input.mouseScrollDelta.y > 0 && zumm >= 1)
         {
             zumm -= 1;
         }
@@ -65,7 +65,7 @@ public class CameraScript : MonoBehaviour
         }
     }
 
-    void FixedUpdate() 
+    void FixedUpdate()
     {
         Vector2 worldPosition = Camera.main.ScreenToWorldPoint(mousePos);
         if (drag == true)
@@ -74,7 +74,7 @@ public class CameraScript : MonoBehaviour
             body.velocity = new Vector2((worldPosition.x - Camera.main.ScreenToWorldPoint(Input.mousePosition).x) * dragForce, (worldPosition.y - Camera.main.ScreenToWorldPoint(Input.mousePosition).y) * dragForce);
             mousePos = Input.mousePosition;
         }
-        body.velocity = body.velocity*ralentissement/100;
+        body.velocity = body.velocity * ralentissement / 100;
     }
 
     void SetZoom(float zoomFactor)
