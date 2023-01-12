@@ -1091,7 +1091,7 @@ MonoBehaviour:
   m_text: '<wiggle>Left Click to create an effect
 
 
-    Right Click to initiate Orbite
+    Right Click to initiate Orbit
     mode'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b13110a1bfcc3734d820a8f17efafa33, type: 2}
@@ -1709,7 +1709,7 @@ MonoBehaviour:
   - {fileID: 2517673374577555983, guid: 54ebb363fcc84ef42a8e27cb8e20b8e5, type: 3}
   - {fileID: 2517673374577555983, guid: de6211a1c39b724418824612ed435357, type: 3}
   - {fileID: 2517673374577555983, guid: c71fd0b2866edc34aad1895e6d40f40c, type: 3}
-  - {fileID: 2517673374577555983, guid: 0c874c652085bf947a5f1780ccb9764a, type: 3}
+  - {fileID: 2517673374577555983, guid: e162019c917c6f544b381202f7ea37fb, type: 3}
   - {fileID: 2517673374577555983, guid: ebd153a4cc1281a4ab593445d9454ad4, type: 3}
   - {fileID: 2517673374577555983, guid: ad811d2b50c1c134db35cd7c13ee743a, type: 3}
   - {fileID: 2517673374577555983, guid: 45536e6c6beec3d4d936053114ad6ad9, type: 3}
