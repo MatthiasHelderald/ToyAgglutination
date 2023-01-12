@@ -192,7 +192,7 @@ MonoBehaviour:
   Path: Toy/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638091299811642897
+  lastModified: 638091299216071823
   FileSizes:
   - Name: Desktop
     Value: 4794240
@@ -316,7 +316,7 @@ MonoBehaviour:
   Path: Toy/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638091299810964437
+  lastModified: 638091299215503025
   FileSizes:
   - Name: Desktop
     Value: 8748160
@@ -527,7 +527,7 @@ MonoBehaviour:
   Path: Toy/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638091299811064384
+  lastModified: 638091299215536488
   FileSizes:
   - Name: Desktop
     Value: 1758
@@ -572,7 +572,7 @@ MonoBehaviour:
   - {fileID: -3399412693695515948}
   StringsBanks:
   - {fileID: -367640758575861234}
-  cacheTime: 638091299811642897
+  cacheTime: 638091299216071823
   cacheVersion: 131601
 --- !u!114 &489273511266722857
 MonoBehaviour:
