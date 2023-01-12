@@ -979,7 +979,7 @@ MonoBehaviour:
   m_text: '<wiggle>Left Click to create an effect
 
 
-    Right Click to initiate Orbite
+    Right Click to initiate Orbit
     mode'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b13110a1bfcc3734d820a8f17efafa33, type: 2}
