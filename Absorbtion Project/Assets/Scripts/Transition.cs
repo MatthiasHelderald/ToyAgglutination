@@ -56,9 +56,9 @@ public class Transition : MonoBehaviour
 
         if (timer >= transitionTimer)
         {
-            if(squareSpawner.squareIndex < 7)
+            if(squareSpawner.squareIndex < 6)
                 {squareSpawner.squareIndex ++;}
-            if(squareSpawner.squareIndex == 7)
+            if(squareSpawner.squareIndex == 6)
                 {squareSpawner.squareIndex = 0;}
             
             foreach (SquareBehavior block in findAllSquare.blocks)
@@ -86,7 +86,7 @@ public class Transition : MonoBehaviour
             backgroundBehavior.event_grab.setParameterByName("transi"+(squareSpawner.squareIndex+1).ToString(), transiSons1);
             transiSons2 = -80 - transiSons1;
 
-            if (squareSpawner.squareIndex != 6)
+            if (squareSpawner.squareIndex != 5)
             {
                 backgroundBehavior.event_music.setParameterByName("transi"+(squareSpawner.squareIndex+2).ToString(), transiSons2);
                 backgroundBehavior.event_grab.setParameterByName("transi"+(squareSpawner.squareIndex+2).ToString(), transiSons2);

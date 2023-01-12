@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 262.1853, g: 324.85815, b: 429.9668, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -319,11 +319,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23c1ce4fb46143f46bc5cb5224c934f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Camera: {fileID: 519420031}
   clearColorMode: 1
-  backgroundColorHDR: {r: 0, g: 0, b: 0.03137255, a: 0}
+  backgroundColorHDR:
+    r: 0
+    g: 0
+    b: 0.03137255
+    a: 0
   clearDepth: 1
   volumeLayerMask:
-    serializedVersion: 2
     m_Bits: 1
   volumeAnchorOverride: {fileID: 0}
   antialiasing: 0
@@ -354,7 +358,6 @@ MonoBehaviour:
   customRenderingSettings: 0
   invertFaceCulling: 0
   probeLayerMask:
-    serializedVersion: 2
     m_Bits: 4294967295
   hasPersistentHistory: 0
   allowDeepLearningSuperSampling: 1
@@ -363,8 +366,11 @@ MonoBehaviour:
   deepLearningSuperSamplingUseCustomAttributes: 0
   deepLearningSuperSamplingUseOptimalSettings: 1
   deepLearningSuperSamplingSharpening: 0
+  cameraCanRenderDLSS: 0
   exposureTarget: {fileID: 0}
   materialMipBias: 0
+  probeCustomFixedExposure: 1
+  deExposureMultiplier: 1
   m_RenderingPathCustomFrameSettings:
     bitDatas:
       data1: 72198260625768269
@@ -379,12 +385,16 @@ MonoBehaviour:
     sssQualityLevel: 0
     sssCustomSampleBudget: 20
     msaaMode: 1
+    sssResolvedSampleBudget: 0
     materialQuality: 0
   renderingPathCustomFrameSettingsOverrideMask:
     mask:
       data1: 0
       data2: 0
   defaultFrameSettings: 0
+  m_IsDebugRegistered: 0
+  m_CameraRegisterName: 
+  <isEditorCameraPreview>k__BackingField: 0
   m_Version: 8
   m_ObsoleteRenderingPath: 0
   m_ObsoleteFrameSettings:
@@ -1456,9 +1466,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Profile: {fileID: 0}
+  m_NeedUpdateStaticLightingSky: 0
   m_StaticLightingSkyUniqueID: 0
+  m_LastComputedHash: 0
   m_StaticLightingCloudsUniqueID: 0
+  m_LastComputedCloudHash: 0
+  m_SkySettings: {fileID: 0}
+  m_SkySettingsFromProfile: {fileID: 0}
+  m_CloudSettings: {fileID: 0}
+  m_CloudSettingsFromProfile: {fileID: 0}
   m_StaticLightingVolumetricClouds: 0
+  m_LastComputedVolumetricCloudHash: 0
+  m_VolumetricClouds: {fileID: 0}
+  m_VolumetricCloudSettingsFromProfile: {fileID: 0}
+  m_VolumeSkyList: []
+  m_VolumeCloudsList: []
 --- !u!4 &1520778372
 Transform:
   m_ObjectHideFlags: 1
@@ -1674,7 +1696,7 @@ MonoBehaviour:
   backgroundBehavior: {fileID: 1912556425}
   image: {fileID: 1091591525}
   c: {r: 0, g: 0, b: 0, a: 0}
-  transitionTimer: 60
+  transitionTimer: 10
   mousePos: {x: 0, y: 0}
   worldPosition: {x: 0, y: 0}
 --- !u!114 &1912556422
@@ -1707,12 +1729,11 @@ MonoBehaviour:
   square_selection:
   - {fileID: 2517673374577555983, guid: 8a326efa33854064085ea884978d8d51, type: 3}
   - {fileID: 2517673374577555983, guid: 54ebb363fcc84ef42a8e27cb8e20b8e5, type: 3}
-  - {fileID: 2517673374577555983, guid: de6211a1c39b724418824612ed435357, type: 3}
-  - {fileID: 2517673374577555983, guid: c71fd0b2866edc34aad1895e6d40f40c, type: 3}
-  - {fileID: 2517673374577555983, guid: 0c874c652085bf947a5f1780ccb9764a, type: 3}
+  - {fileID: 2517673374577555983, guid: bfe4732d2344a2047a4b03a41f5259e2, type: 3}
+  - {fileID: 2517673374577555983, guid: e162019c917c6f544b381202f7ea37fb, type: 3}
+  - {fileID: 2517673374577555983, guid: a938d5ac198b63f479a59726999e6072, type: 3}
   - {fileID: 2517673374577555983, guid: ebd153a4cc1281a4ab593445d9454ad4, type: 3}
   - {fileID: 2517673374577555983, guid: ad811d2b50c1c134db35cd7c13ee743a, type: 3}
-  - {fileID: 2517673374577555983, guid: 45536e6c6beec3d4d936053114ad6ad9, type: 3}
   squareIndex: 0
   mouseOnObject: 0
   timer: 0.1

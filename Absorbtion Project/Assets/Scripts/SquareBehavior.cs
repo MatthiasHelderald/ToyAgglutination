@@ -118,7 +118,7 @@ public class SquareBehavior : MonoBehaviour
             body.velocity = body.velocity.normalized * 500;
         }
         body.velocity = body.velocity * 0.999f;
-        visualEffect.SetFloat("Size", transform.localScale.x);
+        //visualEffect.SetFloat("Size", transform.localScale.x);
 
         
     }
