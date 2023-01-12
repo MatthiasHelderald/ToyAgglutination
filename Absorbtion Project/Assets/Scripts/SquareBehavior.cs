@@ -93,7 +93,7 @@ public class SquareBehavior : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonUp(1))
+        if (Input.GetMouseButtonUp(0))
         {
             drag = false;
         }
@@ -168,7 +168,7 @@ public class SquareBehavior : MonoBehaviour
     //Grab
     void OnMouseOver() 
     {
-        if (Input.GetMouseButton(1))
+        if (Input.GetMouseButton(0))
         {
             drag = true;
         }

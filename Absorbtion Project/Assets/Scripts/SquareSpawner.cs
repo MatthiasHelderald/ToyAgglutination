@@ -18,7 +18,7 @@ public class SquareSpawner : MonoBehaviour
         {
             //timer = currentTime;
         }
-        if (Input.GetMouseButtonDown(0) && mouseOnObject == false)
+        if (Input.GetMouseButtonDown(1) && mouseOnObject == false)
         {
             Vector3 ray = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             ray.z = 0;
