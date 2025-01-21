@@ -1,0 +1,182 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Unity\\ToyAgglutination\\Absorbtion Project\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{93527F00-D145-A50D-8C24-3D7B8D3933A9}|Assembly-CSharp.csproj|d:\\unity\\toyagglutination\\absorbtion project\\assets\\new\\ennemiesquarebehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93527F00-D145-A50D-8C24-3D7B8D3933A9}|Assembly-CSharp.csproj|solutionrelative:assets\\new\\ennemiesquarebehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93527F00-D145-A50D-8C24-3D7B8D3933A9}|Assembly-CSharp.csproj|d:\\unity\\toyagglutination\\absorbtion project\\assets\\new\\tpbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93527F00-D145-A50D-8C24-3D7B8D3933A9}|Assembly-CSharp.csproj|solutionrelative:assets\\new\\tpbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|d:\\unity\\toyagglutination\\absorbtion project\\assets\\vfx\\eclair\\eclairscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\vfx\\eclair\\eclairscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93527F00-D145-A50D-8C24-3D7B8D3933A9}|Assembly-CSharp.csproj|D:\\Unity\\ToyAgglutination\\Absorbtion Project\\assets\\scripts\\selectorscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93527F00-D145-A50D-8C24-3D7B8D3933A9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\selectorscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Unity\\ToyAgglutination\\Absorbtion Project\\assets\\scripts\\transition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\scripts\\transition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93527F00-D145-A50D-8C24-3D7B8D3933A9}|Assembly-CSharp.csproj|D:\\Unity\\ToyAgglutination\\Absorbtion Project\\assets\\scripts\\squarebehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93527F00-D145-A50D-8C24-3D7B8D3933A9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\squarebehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93527F00-D145-A50D-8C24-3D7B8D3933A9}|Assembly-CSharp.csproj|D:\\Unity\\ToyAgglutination\\Absorbtion Project\\assets\\scripts\\eventmergeonscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93527F00-D145-A50D-8C24-3D7B8D3933A9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\eventmergeonscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93527F00-D145-A50D-8C24-3D7B8D3933A9}|Assembly-CSharp.csproj|D:\\Unity\\ToyAgglutination\\Absorbtion Project\\assets\\new\\gradientchange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93527F00-D145-A50D-8C24-3D7B8D3933A9}|Assembly-CSharp.csproj|solutionrelative:assets\\new\\gradientchange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93527F00-D145-A50D-8C24-3D7B8D3933A9}|Assembly-CSharp.csproj|D:\\Unity\\ToyAgglutination\\Absorbtion Project\\assets\\scripts\\squarespawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93527F00-D145-A50D-8C24-3D7B8D3933A9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\squarespawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93527F00-D145-A50D-8C24-3D7B8D3933A9}|Assembly-CSharp.csproj|D:\\Unity\\ToyAgglutination\\Absorbtion Project\\assets\\scripts\\objectselectorscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93527F00-D145-A50D-8C24-3D7B8D3933A9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\objectselectorscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TPBehavior.cs",
+              "DocumentMoniker": "D:\\Unity\\ToyAgglutination\\Absorbtion Project\\Assets\\New\\TPBehavior.cs",
+              "RelativeDocumentMoniker": "Assets\\New\\TPBehavior.cs",
+              "ToolTip": "D:\\Unity\\ToyAgglutination\\Absorbtion Project\\Assets\\New\\TPBehavior.cs",
+              "RelativeToolTip": "Assets\\New\\TPBehavior.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-21T14:06:22.476Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EnnemieSquareBehavior.cs",
+              "DocumentMoniker": "D:\\Unity\\ToyAgglutination\\Absorbtion Project\\Assets\\New\\EnnemieSquareBehavior.cs",
+              "RelativeDocumentMoniker": "Assets\\New\\EnnemieSquareBehavior.cs",
+              "ToolTip": "D:\\Unity\\ToyAgglutination\\Absorbtion Project\\Assets\\New\\EnnemieSquareBehavior.cs",
+              "RelativeToolTip": "Assets\\New\\EnnemieSquareBehavior.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwBIAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-21T13:56:16.398Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EclairScript.cs",
+              "DocumentMoniker": "D:\\Unity\\ToyAgglutination\\Absorbtion Project\\Assets\\VFX\\Eclair\\EclairScript.cs",
+              "RelativeDocumentMoniker": "Assets\\VFX\\Eclair\\EclairScript.cs",
+              "ToolTip": "D:\\Unity\\ToyAgglutination\\Absorbtion Project\\Assets\\VFX\\Eclair\\EclairScript.cs",
+              "RelativeToolTip": "Assets\\VFX\\Eclair\\EclairScript.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-20T13:53:57.451Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SelectorScript.cs",
+              "DocumentMoniker": "D:\\Unity\\ToyAgglutination\\Absorbtion Project\\Assets\\Scripts\\SelectorScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\SelectorScript.cs",
+              "ToolTip": "D:\\Unity\\ToyAgglutination\\Absorbtion Project\\Assets\\Scripts\\SelectorScript.cs",
+              "RelativeToolTip": "Assets\\Scripts\\SelectorScript.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-20T13:53:10.952Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EventMergeOnScript.cs",
+              "DocumentMoniker": "D:\\Unity\\ToyAgglutination\\Absorbtion Project\\Assets\\Scripts\\EventMergeOnScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\EventMergeOnScript.cs",
+              "ToolTip": "D:\\Unity\\ToyAgglutination\\Absorbtion Project\\Assets\\Scripts\\EventMergeOnScript.cs",
+              "RelativeToolTip": "Assets\\Scripts\\EventMergeOnScript.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-20T13:29:57.049Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "GradientChange.cs",
+              "DocumentMoniker": "D:\\Unity\\ToyAgglutination\\Absorbtion Project\\Assets\\New\\GradientChange.cs",
+              "RelativeDocumentMoniker": "Assets\\New\\GradientChange.cs",
+              "ToolTip": "D:\\Unity\\ToyAgglutination\\Absorbtion Project\\Assets\\New\\GradientChange.cs",
+              "RelativeToolTip": "Assets\\New\\GradientChange.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAQwB4AAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T16:03:58.644Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Transition.cs",
+              "DocumentMoniker": "D:\\Unity\\ToyAgglutination\\Absorbtion Project\\Assets\\Scripts\\Transition.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Transition.cs",
+              "ToolTip": "D:\\Unity\\ToyAgglutination\\Absorbtion Project\\Assets\\Scripts\\Transition.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Transition.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACcAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-13T14:39:03.583Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SquareSpawner.cs",
+              "DocumentMoniker": "D:\\Unity\\ToyAgglutination\\Absorbtion Project\\Assets\\Scripts\\SquareSpawner.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\SquareSpawner.cs",
+              "ToolTip": "D:\\Unity\\ToyAgglutination\\Absorbtion Project\\Assets\\Scripts\\SquareSpawner.cs",
+              "RelativeToolTip": "Assets\\Scripts\\SquareSpawner.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-13T12:59:03.185Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SquareBehavior.cs",
+              "DocumentMoniker": "D:\\Unity\\ToyAgglutination\\Absorbtion Project\\Assets\\Scripts\\SquareBehavior.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\SquareBehavior.cs",
+              "ToolTip": "D:\\Unity\\ToyAgglutination\\Absorbtion Project\\Assets\\Scripts\\SquareBehavior.cs",
+              "RelativeToolTip": "Assets\\Scripts\\SquareBehavior.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABgAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-13T10:56:31.309Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ObjectSelectorScript.cs",
+              "DocumentMoniker": "D:\\Unity\\ToyAgglutination\\Absorbtion Project\\Assets\\Scripts\\ObjectSelectorScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ObjectSelectorScript.cs",
+              "ToolTip": "D:\\Unity\\ToyAgglutination\\Absorbtion Project\\Assets\\Scripts\\ObjectSelectorScript.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ObjectSelectorScript.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAiAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADvSURBVDhPYxgFCHDx8cX/cavj/mtO0Pyv2qf6P3Jl5H\u002BoFMPbj2//q09QB/OR2SDACCIuP7n8P2JtBIOZtBlDokEiAz87P8ONNzcYwg3DGUEaTOaYgBUjAzZmNoabBTfB\u002BhlS16f\u002B91rg9f/Lly9wk5EBPhcwgYhTT08xeKh4MPDw8EBMJAGADWBlYgVjbADmhV9/fzEo9irC2ciuYIheGf0/bHkYVueDAD4vgJ188v7J/1Froxg8VD0YwrTCGFiZWRkuv7rMkG6RTtBLcAV7bu75P/X0VIa77\u002B8ycLJyMjjIOTB0enWSHCYjDzAwAADfwHLttPx8VwAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-01-13T10:47:02.605Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

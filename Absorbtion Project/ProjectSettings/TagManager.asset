@@ -7,6 +7,7 @@ TagManager:
   - Squareblock
   - Mur
   - Murx
+  - Ennemie
   layers:
   - Default
   - TransparentFX

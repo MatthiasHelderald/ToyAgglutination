@@ -11,20 +11,6 @@ public class SquareBehavior : MonoBehaviour
     private Rigidbody2D body;
     private Renderer cubeRenderer;
 
-    [Header("Timer")]
-    public float timer = 5;
-    public float countdown = 5;
-
-    [Header("Nombre de merge")]
-    public int mergecounter = 0;
-    public int mergeLimit = 10;
-    private Vector2 movement;
-
-    [Header("BlackHole")]
-    [Tooltip("Nombre de merge avant la création du trou noir")]
-    public int blackholenb = 10;
-    public bool blackholestate = false;
-
     public enum SquareTypes {
         normal,
         orbite,
@@ -35,13 +21,9 @@ public class SquareBehavior : MonoBehaviour
     public SquareTypes mySquareType;
     private bool rot;
 
-    float mass;
-    [Tooltip("Froce de la gravité")]
-    public float gravityMultiplier = 10;
-
-    public bool drag = false;
     [Tooltip("Froce du Grab")]
     public float gradForce = 50;
+    public float maxSpeed = 50;
 
     public FindAllSquare findAllSquare;
     public SquareSpawner squareSpawner;
@@ -55,127 +37,37 @@ public class SquareBehavior : MonoBehaviour
         squareSpawner = GameObject.Find("GameManager").GetComponent<SquareSpawner>();
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Squareblock"))// && drag == false)
-        {
-            mergecounter += 1;
-            if (mergecounter == blackholenb)
-            {
-                blackholestate = true;
-                cubeRenderer.material.SetColor("_Color", Color.black);
-
-                transform.localScale = new Vector2(50f * 0.75f, 50f * 0.75f);
-                body.constraints = RigidbodyConstraints2D.FreezeAll;
-                //mySquareType = SquareTypes.blackhole;
-                //On change la taille la couleur de l'objet
-            }
-            int mergecompare = collision.gameObject.GetComponent<SquareBehavior>().mergecounter;
-
-            if (mergecounter > mergecompare & blackholestate == false)
-            {
-                Destroy(collision.gameObject);
-
-                transform.localScale = new Vector2(0.5f * mergecounter, 0.5f * mergecounter);
-
-            }
-            if ( mergecounter > mergecompare & blackholestate & true)
-            {
-                Destroy(collision.gameObject);
-            }
-            //body.velocity = new Vector2(0,0);
-        }
-    }
-
     void Update()
     {
-        if (Input.GetMouseButtonUp(1))
+        if (body.velocity.magnitude >maxSpeed)
         {
-            drag = false;
+            body.velocity = body.velocity.normalized * maxSpeed;
         }
-
-        if (mergecounter >= mergeLimit)
-        {
-            for(int i = 0; i < mergeLimit; i++) 
-            {
-                GameObject newBloc = Instantiate(squareSpawner.square_selection[squareSpawner.squareIndex], gameObject.transform.position, gameObject.transform.rotation);
-                newBloc.transform.position = new Vector3(transform.position.x + Mathf.Cos(360*i/10)*2, transform.position.y + Mathf.Sin(360*i/10)*2);
-                newBloc.GetComponent<Rigidbody2D>().velocity = new Vector2(Mathf.Cos(360*i/10)*50, Mathf.Sin(360*i/10)*50);
-                if(drag == true)
-                {
-                    newBloc.GetComponent<SquareBehavior>().drag = true;
-                }
-            }
-            FMODUnity.RuntimeManager.PlayOneShot("event:/Implosion" + (squareSpawner.squareIndex).ToString());
-            Destroy(gameObject);
-        }
-        if (body.velocity.magnitude >500)
-        {
-            body.velocity = body.velocity.normalized * 500;
-        }
-        body.velocity = body.velocity * 0.999f;
-        visualEffect.SetFloat("Size", transform.localScale.x);
-
-        
+        //body.velocity = body.velocity * 0.95f;
     }
-    //pour générer de la gravité avec tout les objets
+
+    
     void FixedUpdate()
     {
-        body.mass = mergecounter+1;
-        mass = mergecounter+1;
-        
-        foreach (SquareBehavior block in findAllSquare.blocks)
+        Vector2 mousePos = Input.mousePosition;
+        Vector2 worldPosition = Camera.main.ScreenToWorldPoint(mousePos);
+        switch(mySquareType)
         {
-            if (block != null)
-            {
-                float distance = Vector2.Distance(block.transform.position, transform.position);
-                if (distance != 0 && distance <= 50)
+            case SquareTypes.normal:
+                body.velocity = new Vector2((worldPosition.x - transform.position.x) * gradForce, (worldPosition.y - transform.position.y)*gradForce);
+                break;
+            case SquareTypes.boid:
+                if (Vector2.Distance(worldPosition,transform.position) >= 20)
                 {
-                    body.AddForce(new Vector2(block.transform.position.x - transform.position.x, block.transform.position.y - transform.position.y).normalized * (mass * block.mass / Mathf.Pow(distance, 2f))*gravityMultiplier);
+                    body.AddForce(new Vector2((worldPosition.x - transform.position.x), (worldPosition.y - transform.position.y)));
                 }
-            }
-        }
-        
-        if (drag == true)
-        {
-            Vector2 mousePos = Input.mousePosition;
-            Vector2 worldPosition = Camera.main.ScreenToWorldPoint(mousePos);
-            switch(mySquareType)
-            {
-                case SquareTypes.normal:
-                    body.velocity = new Vector2((worldPosition.x - transform.position.x) * gradForce, (worldPosition.y - transform.position.y)*gradForce);
-                    break;
-                case SquareTypes.boid:
-                    if (Vector2.Distance(worldPosition,transform.position) >= 20)
-                    {
-                        body.AddForce(new Vector2((worldPosition.x - transform.position.x), (worldPosition.y - transform.position.y)));
-                    }
-                    break;
-                case SquareTypes.orbite:
-                    body.AddForce(new Vector2((worldPosition.x - transform.position.x) * gradForce, (worldPosition.y - transform.position.y)*gradForce));
-                    break;
-                case SquareTypes.blackhole:
-                    body.velocity = new Vector2((worldPosition.x - transform.position.x) * gradForce, (worldPosition.y - transform.position.y)*gradForce);
-                    break;
-            }
-        }
-    }
-
-    //Grab
-    void OnMouseOver() 
-    {
-        if (Input.GetMouseButton(1))
-        {
-            drag = true;
-        }
-        else
-        {
-            drag = false;
-            mySquareType = SquareTypes.orbite;
+                break;
+            case SquareTypes.orbite:
+                body.AddForce(new Vector2((worldPosition.x - transform.position.x) * gradForce, (worldPosition.y - transform.position.y)*gradForce));
+                break;
+            case SquareTypes.blackhole:
+                body.velocity = new Vector2((worldPosition.x - transform.position.x) * gradForce, (worldPosition.y - transform.position.y)*gradForce);
+                break;
         }
     }
 }
